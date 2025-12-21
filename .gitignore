@@ -1,0 +1,43 @@
+# Зависимости
+node_modules/
+package-lock.json
+yarn.lock
+
+# Логи
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Временные файлы
+*.tmp
+*.temp
+.cache/
+
+# Окружение
+.env
+.env.local
+.env.*.local
+
+# Dist/Build
+dist/
+build/
+*.min.js
+*.min.css
+
+# Тестирование
+coverage/
+.nyc_output/
+

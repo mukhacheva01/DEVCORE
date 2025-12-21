@@ -1,0 +1,127 @@
+/* ==================== CARDS COMPONENT ==================== */
+
+.project-card {
+    padding: var(--space-lg);
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 30px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition-smooth);
+}
+
+.project-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+.project-badge {
+    margin-bottom: 30px;
+}
+
+.badge-symbol {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.project-title {
+    font-size: clamp(24px, 3vw, 42px);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.02em;
+}
+
+.project-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.project-link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    transition: var(--transition-fast);
+}
+
+.project-link::after {
+    content: '→';
+    transition: var(--transition-fast);
+}
+
+.project-link:hover {
+    color: var(--color-accent);
+}
+
+.project-link:hover::after {
+    transform: translateX(5px);
+}
+
+/* Contact Cards */
+.contact-card {
+    padding: var(--space-md);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-fast);
+}
+
+.contact-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.contact-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 15px;
+}
+
+.contact-card a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    display: block;
+    margin-bottom: var(--space-xs);
+    transition: var(--transition-fast);
+}
+
+.contact-card a:hover {
+    color: var(--color-accent-secondary);
+}
+
+.contact-person {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        padding: 30px;
+    }
+}
+

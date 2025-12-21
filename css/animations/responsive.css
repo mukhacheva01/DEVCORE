@@ -1,0 +1,47 @@
+/* ==================== RESPONSIVE & ACCESSIBILITY ==================== */
+
+@media (max-width: 768px) {
+    /* Отключаем cursor на мобильных */
+    body {
+        cursor: auto;
+    }
+    
+    .custom-cursor,
+    .custom-cursor-dot,
+    .cursor-trail {
+        display: none;
+    }
+    
+    /* Упрощаем анимации на мобильных */
+    .particle {
+        display: none;
+    }
+    
+    .float-animation {
+        animation: none;
+    }
+    
+    /* Сохраняем важные анимации */
+    .fade-in {
+        animation: fadeInUp 0.5s ease-out forwards;
+    }
+}
+
+/* Отключаем анимации при запросе пользователя */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .custom-cursor,
+    .custom-cursor-dot,
+    .cursor-trail,
+    .particle {
+        display: none;
+    }
+}
+
