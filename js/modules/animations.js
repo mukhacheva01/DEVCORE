@@ -57,7 +57,7 @@ export class AdvancedScrollAnimations {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
                 const animationType = entry.target.dataset.animation || ANIMATION_TYPES.FADE_IN_UP;
-                entry.target.style.animation = `${animationType} 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards`;
+                entry.target.style.animation = `${animationType} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards`;
                 entry.target.style.animationDelay = `${index * CONFIG.ANIMATION_DELAY_MULTIPLIER}s`;
             }
         });

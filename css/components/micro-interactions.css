@@ -1,0 +1,176 @@
+/* ==================== MICRO-INTERACTIONS ==================== */
+
+/* Hover scale effect for interactive elements */
+.interactive-hover {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.interactive-hover:hover {
+    transform: scale(1.05);
+}
+
+/* Smooth color transitions */
+.interactive-color {
+    transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Focus ring for accessibility */
+.interactive-focus:focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Press effect */
+.interactive-press:active {
+    transform: scale(0.98);
+}
+
+/* Glow effect on hover */
+.interactive-glow {
+    transition: box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.interactive-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4),
+                0 0 40px rgba(255, 107, 53, 0.2);
+}
+
+/* Bounce animation on interaction */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.interactive-bounce:hover {
+    animation: bounce 0.6s ease-in-out;
+}
+
+/* Pulse effect */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.interactive-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Shake effect for errors */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.interactive-shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Smooth underline animation */
+.interactive-underline {
+    position: relative;
+    text-decoration: none;
+}
+
+.interactive-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-orange);
+    transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.interactive-underline:hover::after {
+    width: 100%;
+}
+
+/* Slide up on hover */
+.interactive-slide-up {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.interactive-slide-up:hover {
+    transform: translateY(-5px);
+}
+
+/* Rotate on hover */
+.interactive-rotate {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.interactive-rotate:hover {
+    transform: rotate(5deg);
+}
+
+/* Smooth background gradient shift */
+.interactive-gradient {
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease;
+}
+
+.interactive-gradient:hover {
+    background-position: 100% 0;
+}
+
+/* Icon wiggle */
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+.interactive-wiggle:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+/* Smooth opacity transition */
+.interactive-fade {
+    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.interactive-fade:hover {
+    opacity: 0.8;
+}
+
+/* Combine multiple effects */
+.interactive-complete {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.interactive-complete:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+.interactive-complete:active {
+    transform: translateY(-1px) scale(1);
+}
+

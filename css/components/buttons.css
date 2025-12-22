@@ -12,7 +12,7 @@
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-secondary));
+    background: var(--gradient-primary);
     color: var(--color-text);
 }
 
@@ -37,6 +37,26 @@
     opacity: 1;
 }
 
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.btn-primary:disabled,
+.btn-primary[disabled] {
+    background: var(--color-disabled);
+    color: var(--color-disabled-text);
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+.btn-primary:disabled:hover,
+.btn-primary[disabled]:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 .btn span {
     position: relative;
     z-index: 1;
@@ -44,18 +64,22 @@
 
 .cta-button {
     display: inline-block;
-    padding: 20px 50px;
-    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-secondary));
+    padding: 22px 56px;
+    background: var(--gradient-primary);
     color: var(--color-text);
     text-decoration: none;
     border-radius: var(--border-radius-full);
-    font-size: var(--font-size-lg);
+    font-size: clamp(16px, 1.5vw, 20px);
     font-weight: 600;
-    transition: var(--transition-fast);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: none;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpButton 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s forwards;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
 }
 
 .cta-button::before {
@@ -76,18 +100,19 @@
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-accent);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.5), 0 0 40px rgba(255, 107, 53, 0.3);
 }
 
 .cta-button:hover::before {
     opacity: 1;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .submit-button {
     width: 100%;
     padding: var(--space-sm);
-    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-secondary));
+    background: var(--gradient-primary);
     color: var(--color-text);
     border: none;
     border-radius: var(--border-radius-sm);
@@ -95,10 +120,149 @@
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
 .submit-button:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-accent);
+}
+
+/* ==================== BUTTON VARIANTS ==================== */
+
+/* Primary button (default gradient) - already defined above for .btn-primary and .cta-button */
+
+/* Secondary button (solid color) */
+.btn-secondary {
+    background: var(--color-card-bg);
+    color: var(--color-text);
+    border: 2px solid var(--color-orange);
+    padding: 20px 52px;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 107, 53, 0.1);
+    border-color: var(--color-orange-light);
+    color: var(--color-orange-light);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3), 0 0 40px rgba(255, 107, 53, 0.2);
+}
+
+/* Outline button (transparent with border) */
+.btn-outline {
+    background: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
+    padding: 20px 52px;
+}
+
+.btn-outline:hover {
+    background: var(--color-card-bg);
+    border-color: var(--color-orange);
+    color: var(--color-orange);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 107, 53, 0.2);
+}
+
+/* Button with icon */
+.btn-icon,
+.cta-button.btn-icon,
+.submit-button.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn-icon svg,
+.cta-button.btn-icon svg,
+.submit-button.btn-icon svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    flex-shrink: 0;
+}
+
+.btn-icon:hover svg,
+.cta-button.btn-icon:hover svg,
+.submit-button.btn-icon:hover svg {
+    transform: translateX(4px);
+}
+
+.btn-icon.btn-icon-left svg,
+.cta-button.btn-icon.btn-icon-left svg,
+.submit-button.btn-icon.btn-icon-left svg {
+    order: -1;
+}
+
+.btn-icon.btn-icon-right svg,
+.cta-button.btn-icon.btn-icon-right svg,
+.submit-button.btn-icon.btn-icon-right svg {
+    order: 1;
+}
+
+.btn-icon.btn-icon-left:hover svg,
+.cta-button.btn-icon.btn-icon-left:hover svg,
+.submit-button.btn-icon.btn-icon-left:hover svg {
+    transform: translateX(-4px);
+}
+
+/* Button sizes */
+.btn-small {
+    padding: 14px 32px;
+    font-size: clamp(14px, 1.2vw, 16px);
+}
+
+.btn-large {
+    padding: 24px 64px;
+    font-size: clamp(18px, 1.8vw, 24px);
+}
+
+/* Loading state */
+.btn-loading,
+.btn-loading *,
+.submit-button.btn-loading,
+.submit-button.btn-loading *,
+.cta-button.btn-loading,
+.cta-button.btn-loading * {
+    pointer-events: none;
+    cursor: wait;
+}
+
+.btn-loading,
+.submit-button.btn-loading,
+.cta-button.btn-loading {
+    position: relative;
+    color: transparent !important;
+    opacity: 0.8;
+}
+
+.btn-loading::after,
+.submit-button.btn-loading::after,
+.cta-button.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid var(--color-text);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    z-index: 10;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 

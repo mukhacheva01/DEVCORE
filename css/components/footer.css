@@ -18,6 +18,19 @@
     font-weight: 700;
 }
 
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+    opacity: 0.9;
+    transition: var(--transition-fast);
+}
+
+.footer-logo img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 .footer-links {
     display: flex;
     gap: 30px;

@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevCore — Цифровые решения нового поколения</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="DevCore — точка притяжения инноваций, современных технологий и амбициозных проектов. Разработка веб-приложений, мобильных приложений, UI/UX дизайн.">
+    <meta name="keywords" content="веб-разработка, мобильные приложения, UI/UX дизайн, цифровая трансформация, DevCore">
+    <meta name="author" content="DevCore">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devcore.dev/">
+    <meta property="og:title" content="DevCore — Цифровые решения нового поколения">
+    <meta property="og:description" content="Точка притяжения инноваций, современных технологий и амбициозных проектов">
+    <meta property="og:image" content="картинки/логотип.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://devcore.dev/">
+    <meta property="twitter:title" content="DevCore — Цифровые решения нового поколения">
+    <meta property="twitter:description" content="Точка притяжения инноваций, современных технологий и амбициозных проектов">
+    <meta property="twitter:image" content="картинки/логотип.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="картинки/логотип.jpg">
+    <link rel="apple-touch-icon" href="картинки/логотип.jpg">
+    
+    <!-- Модульные стили -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,9 +36,9 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-logo">
-                <span class="logo-bracket">((</span>
-                <span class="logo-text">DEVCORE</span>
-                <span class="logo-bracket">))</span>
+                <a href="#">
+                    <img src="картинки/логотип.jpg" alt="DevCore Logo" />
+                </a>
             </div>
             <ul class="nav-menu">
                 <li><a href="#projects">Проекты</a></li>
@@ -33,15 +58,10 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="scroll-indicator">
-                    <span class="scroll-percent">((0%))</span>
-                </div>
                 <h1 class="hero-title">
                     <span class="title-line">Привет, это</span>
                     <span class="title-main">
-                        <span class="bracket">((</span>
                         <span class="gradient-text">DEVCORE</span>
-                        <span class="bracket">))</span>
                     </span>
                     <span class="title-subtitle">точка притяжения инноваций,<br>современных технологий<br>и амбициозных проектов</span>
                 </h1>
@@ -62,11 +82,13 @@
                 <span class="tag">CLOUD INFRASTRUCTURE</span>
             </div>
             <h2 class="section-title">
-                Готовы к<br>
-                <span class="gradient-text">цифровой трансформации?</span>
+                Готовы к <span class="gradient-text">цифровой трансформации?</span>
             </h2>
-            <a href="#contact" class="cta-button">
+            <a href="#contact" class="cta-button btn-icon btn-icon-right">
                 <span>Хочу работать с вами</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
             </a>
         </div>
     </section>
@@ -78,7 +100,10 @@
             
             <div class="project-card">
                 <div class="project-badge">
-                    <span class="badge-symbol">((D))</span>
+                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z" fill="currentColor"/>
+                        <path d="M9 8V17H11V8H9ZM13 8V17H15V8H13Z" fill="currentColor"/>
+                    </svg>
                 </div>
                 <h3 class="project-title">Умная платформа для e-commerce</h3>
                 <p class="project-description">Масштабируемое решение с AI-рекомендациями и аналитикой в реальном времени</p>
@@ -87,7 +112,9 @@
 
             <div class="project-card">
                 <div class="project-badge">
-                    <span class="badge-symbol">((D))</span>
+                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8H20V18ZM12 17L17 12L15.59 10.59L13 13.17L10.41 10.59L9 12L12 15Z" fill="currentColor"/>
+                    </svg>
                 </div>
                 <h3 class="project-title">Мобильное приложение для финтеха</h3>
                 <p class="project-description">Безопасные транзакции и интуитивный UX для миллионов пользователей</p>
@@ -96,7 +123,9 @@
 
             <div class="project-card">
                 <div class="project-badge">
-                    <span class="badge-symbol">((D))</span>
+                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.36 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.36 10.04ZM19 18H6C3.79 18 2 16.21 2 14C2 11.95 3.53 10.24 5.56 10.03L6.63 9.92L7.13 8.97C8.08 7.14 9.94 6 12 6C15.04 6 17.5 8.46 17.5 11.5V12H19C20.66 12 22 13.34 22 15C22 16.66 20.66 18 19 18Z" fill="currentColor"/>
+                    </svg>
                 </div>
                 <h3 class="project-title">SaaS-платформа для бизнеса</h3>
                 <p class="project-description">Полный цикл от дизайна до развертывания в облаке</p>
@@ -105,7 +134,10 @@
 
             <div class="project-card">
                 <div class="project-badge">
-                    <span class="badge-symbol">((D))</span>
+                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+                        <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="currentColor"/>
+                    </svg>
                 </div>
                 <h3 class="project-title">Корпоративная система автоматизации</h3>
                 <p class="project-description">Интеграция legacy-систем с современными технологиями</p>
@@ -114,33 +146,151 @@
         </div>
     </section>
 
+    <!-- Услуги -->
+    <section id="services-list" class="services-list">
+        <div class="container">
+            <h2 class="section-header">Наши услуги</h2>
+            
+            <!-- Analytics -->
+            <div class="service-category" data-category="analytics">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="category-title">Analytics</h3>
+                </div>
+                <p class="category-description">Глубокий анализ пользовательского опыта и бизнес-процессов для выявления возможностей оптимизации и роста</p>
+                <div class="service-tags-grid">
+                    <span class="service-tag">UI/UX audit</span>
+                    <span class="service-tag">Discovery phase</span>
+                    <span class="service-tag">System analysis</span>
+                </div>
+            </div>
+
+            <!-- Design -->
+            <div class="service-category" data-category="design">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="category-title">Design</h3>
+                </div>
+                <p class="category-description">Создание интуитивных и эстетичных интерфейсов, которые решают бизнес-задачи и радуют пользователей</p>
+                <div class="service-tags-grid">
+                    <span class="service-tag">UI/UX design</span>
+                    <span class="service-tag">Web design</span>
+                    <span class="service-tag">Mobile app design</span>
+                    <span class="service-tag">Website redesign</span>
+                </div>
+            </div>
+
+            <!-- Development -->
+            <div class="service-category" data-category="development">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="category-title">Development</h3>
+                </div>
+                <p class="category-description">Разработка масштабируемых решений на современных технологиях для веб, мобильных и настольных платформ</p>
+                <div class="service-tags-grid">
+                    <span class="service-tag">Mobile App Development</span>
+                    <span class="service-tag">Web development</span>
+                    <span class="service-tag">Custom software development</span>
+                    <span class="service-tag">Software development for startups</span>
+                    <span class="service-tag">Cross-platform development</span>
+                    <span class="service-tag">MVP</span>
+                    <span class="service-tag">iOS</span>
+                    <span class="service-tag">Android</span>
+                    <span class="service-tag">Desktop</span>
+                </div>
+                <div class="tech-list">
+                    <span class="tech-item">Electron</span>
+                    <span class="tech-item">Node.js</span>
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">React Native</span>
+                    <span class="tech-item">Flutter</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- О нас -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <h2 class="section-title">
-                    <span class="bracket">((</span>
-                    <span class="gradient-text">DevCore</span>
-                    <span class="bracket">))</span>
-                </h2>
-                <p class="about-text">
-                    разрабатываем с 2020 года<br><br>
-                    Мы — команда опытных разработчиков, дизайнеров и технологических энтузиастов. 
-                    Создаем цифровые продукты, которые решают реальные бизнес-задачи и меняют индустрии.
-                </p>
+                <!-- Header -->
+                <div class="about-header">
+                    <h2 class="about-title">
+                        <span class="gradient-text">DevCore</span>
+                    </h2>
+                    <p class="about-subtitle">разрабатываем с 2020 года</p>
+                </div>
+
+                <!-- Description -->
+                <div class="about-description">
+                    <div class="about-text-block">
+                        <p class="about-text-primary">
+                            Мы — команда опытных разработчиков, дизайнеров и технологических энтузиастов. 
+                            Создаем цифровые продукты, которые решают реальные бизнес-задачи и меняют индустрии.
+                        </p>
+                    </div>
+                    <div class="about-text-block">
+                        <p class="about-text-secondary">
+                            Наш подход основан на глубоком понимании потребностей клиентов, использовании современных технологий 
+                            и стремлении к совершенству в каждой детали. Мы помогаем стартапам и крупным компаниям 
+                            создавать инновационные решения, которые выделяют их на рынке и приносят реальную ценность пользователям.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Statistics -->
                 <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">150+</span>
+                    <div class="stat-item" data-number="150" data-suffix="+">
+                        <span class="stat-number" data-target="150">0+</span>
                         <span class="stat-label">Проектов</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
+                    <div class="stat-item" data-number="50" data-suffix="+">
+                        <span class="stat-number" data-target="50">0+</span>
                         <span class="stat-label">Клиентов</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">30+</span>
+                    <div class="stat-item" data-number="30" data-suffix="+">
+                        <span class="stat-number" data-target="30">0+</span>
                         <span class="stat-label">Специалистов</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="trusted-by">
+        <div class="container">
+            <h2 class="section-header">Нам доверяют</h2>
+            <div class="clients-logos">
+                <div class="client-logo">
+                    <div class="logo-placeholder">Client 1</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder">Client 2</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder">Client 3</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder">Client 4</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder">Client 5</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder">Client 6</div>
                 </div>
             </div>
         </div>
@@ -185,8 +335,11 @@
                 <div class="form-group">
                     <textarea name="message" placeholder="Расскажите о вашем проекте" rows="4" required></textarea>
                 </div>
-                <button type="submit" class="submit-button">
+                <button type="submit" class="submit-button btn-icon btn-icon-right">
                     <span>Отправить</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
                 </button>
                 <p class="form-note">Нажимая на кнопку, вы даете согласие на обработку персональных данных</p>
             </form>
@@ -198,9 +351,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="bracket">((</span>
-                    <span>DevCore</span>
-                    <span class="bracket">))</span>
+                    <img src="картинки/логотип.jpg" alt="DevCore Logo" />
                 </div>
                 <div class="footer-links">
                     <a href="#">GitHub</a>
@@ -224,7 +375,8 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Модульный JavaScript -->
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
 

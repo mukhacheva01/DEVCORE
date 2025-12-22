@@ -1,5 +1,6 @@
 /* ==================== ТИПОГРАФИКА ==================== */
 
+/* Иерархия размеров шрифтов */
 .text-xs { font-size: var(--font-size-xs); }
 .text-sm { font-size: var(--font-size-sm); }
 .text-base { font-size: var(--font-size-base); }
@@ -8,13 +9,28 @@
 .text-2xl { font-size: var(--font-size-2xl); }
 .text-3xl { font-size: var(--font-size-3xl); }
 
+/* Иерархия весов шрифтов */
+.font-light { font-weight: 300; }
 .font-normal { font-weight: 400; }
 .font-medium { font-weight: 500; }
 .font-semibold { font-weight: 600; }
 .font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+
+/* Иерархия цветов текста для контрастности */
+.text-primary { color: var(--color-text); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+.text-accent { color: var(--color-accent); }
+.text-gradient { 
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
 .gradient-text {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    background: var(--gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -30,19 +46,3 @@
         background-position: 100% 50%;
     }
 }
-
-.bracket {
-    font-size: clamp(50px, 10vw, 140px);
-    color: var(--color-accent);
-    animation: bracketPulse 3s ease-in-out infinite;
-}
-
-@keyframes bracketPulse {
-    0%, 100% {
-        opacity: 0.6;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-

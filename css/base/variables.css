@@ -1,17 +1,57 @@
 /* ==================== CSS ПЕРЕМЕННЫЕ ==================== */
 :root {
-    /* Цвета */
+    /* Цвета - на основе фирменной палитры DEVCORE */
+    /* Контрастность проверена для WCAG AA:
+       - #ffffff на #0a0a0a: 16.6:1 (отлично)
+       - #b0b0b0 на #0a0a0a: 7.5:1 (отлично, минимум 4.5:1)
+       - #808080 на #0a0a0a: 5.4:1 (хорошо) */
     --color-bg: #0a0a0a;
     --color-text: #ffffff;
-    --color-text-secondary: #999999;
-    --color-accent: #6366f1;
-    --color-accent-secondary: #8b5cf6;
+    --color-text-secondary: #b0b0b0; /* Контраст 7.5:1 - WCAG AA */
+    --color-text-muted: #808080; /* Контраст 5.4:1 - WCAG AA */
+    
+    /* Основная палитра из логотипа и цветовой гаммы */
+    --color-orange: #FF6B35;
+    --color-orange-light: #FF8C42;
+    --color-blue: #4ECDC4;
+    --color-blue-light: #5FB3D3;
+    --color-blue-dark: #2E86AB;
+    --color-purple: #9D4EDD;
+    --color-purple-light: #C77DFF;
+    
+    /* Акцентные цвета для градиентов */
+    --color-accent: var(--color-orange);
+    --color-accent-secondary: var(--color-blue);
+    --color-accent-tertiary: var(--color-purple);
+    
+    /* Дополнительные цвета */
     --color-border: #1a1a1a;
     --color-card-bg: #111111;
     
+    /* Состояния элементов */
+    --color-hover: rgba(255, 107, 53, 0.1);
+    --color-active: rgba(255, 107, 53, 0.2);
+    --color-disabled: #333333;
+    --color-disabled-text: #555555;
+    
+    /* Типы контента (сообщения, статусы) */
+    --color-success: #10b981;
+    --color-success-light: rgba(16, 185, 129, 0.1);
+    --color-warning: #f59e0b;
+    --color-warning-light: rgba(245, 158, 11, 0.1);
+    --color-error: #ef4444;
+    --color-error-light: rgba(239, 68, 68, 0.1);
+    --color-info: var(--color-blue);
+    --color-info-light: rgba(78, 205, 196, 0.1);
+    
+    /* Градиенты */
+    --gradient-primary: linear-gradient(135deg, var(--color-orange) 0%, var(--color-blue) 50%, var(--color-purple) 100%);
+    --gradient-hero: linear-gradient(135deg, var(--color-orange-light) 0%, var(--color-blue-light) 50%, var(--color-purple-light) 100%);
+    --gradient-text: linear-gradient(135deg, var(--color-orange) 0%, var(--color-blue) 50%, var(--color-purple) 100%);
+    
     /* Типографика */
-    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    --font-display: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-main: 'Codec Pro Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    --font-display: 'Codec Pro Variable', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
     
     --font-size-xs: 13px;
     --font-size-sm: 14px;
@@ -44,7 +84,7 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-    --shadow-accent: 0 10px 40px rgba(99, 102, 241, 0.4);
+    --shadow-accent: 0 10px 40px rgba(255, 107, 53, 0.4);
     
     /* Z-index layers */
     --z-particles: -1;

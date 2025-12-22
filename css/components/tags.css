@@ -21,8 +21,19 @@
 }
 
 .tag:hover {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
+    background: var(--color-orange);
+    border-color: var(--color-orange);
     transform: translateY(-2px);
+    color: var(--color-text);
+}
+
+.tag:active {
+    background: var(--color-orange-light);
+    border-color: var(--color-orange-light);
+}
+
+.tag:focus {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
 }
 

@@ -23,6 +23,24 @@
     font-size: var(--font-size-xl);
     font-weight: 700;
     letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+    transition: var(--transition-fast);
+}
+
+.nav-logo img:hover {
+    transform: scale(1.05);
 }
 
 .logo-bracket {
@@ -54,16 +72,26 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary));
+    background: var(--gradient-primary);
     transition: var(--transition-fast);
 }
 
 .nav-menu a:hover {
-    color: var(--color-accent);
+    color: var(--color-orange);
 }
 
 .nav-menu a:hover::after {
     width: 100%;
+}
+
+.nav-menu a:active {
+    color: var(--color-orange-light);
+}
+
+.nav-menu a:focus {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .nav-toggle {

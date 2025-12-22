@@ -34,6 +34,9 @@ import {
 import { initCustomCursor } from './modules/cursor.js';
 import { initParticles } from './modules/particles.js';
 import { initContactForm } from './modules/form.js';
+import { initParallaxHero } from './modules/parallax.js';
+import { initServicesFilter } from './modules/services-filter.js';
+import { initCounterAnimation } from './modules/counter.js';
 
 /**
  * Main Application Class
@@ -74,7 +77,6 @@ class DevCoreApp {
      */
     initCoreModules() {
         initScrollAnimations();
-        initScrollIndicator();
         initMobileMenu();
         initSmoothScroll();
         initSmartNavbar();
@@ -89,6 +91,7 @@ class DevCoreApp {
         initParticles();
         initMagneticButtons();
         initTypingEffect();
+        initParallaxHero();
     }
 
     /**
@@ -98,6 +101,8 @@ class DevCoreApp {
         initRippleEffect();
         initTextReveal();
         initFloatingElements();
+        initServicesFilter();
+        initCounterAnimation();
         
         // Advanced scroll animations with delay
         setTimeout(() => {

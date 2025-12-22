@@ -17,8 +17,8 @@ export const CONFIG = {
     CURSOR_REMOVE_DELAY: 3000, // ms
     
     // Animations
-    ANIMATION_DELAY_MULTIPLIER: 0.1,
-    TEXT_REVEAL_CHAR_DELAY: 0.03,
+    ANIMATION_DELAY_MULTIPLIER: 0.08,
+    TEXT_REVEAL_CHAR_DELAY: 0.02,
     
     // Magnetic
     MAGNETIC_STRENGTH: 0.3,
@@ -41,9 +41,9 @@ export const SELECTORS = {
     titleMain: '.title-main .gradient-text',
     
     // Animations
-    fadeElements: '.project-card, .contact-card, .stat-item, .tag',
+    fadeElements: '.project-card, .contact-card, .stat-item, .tag, .service-category',
     floatElements: '.project-badge, .badge-symbol',
-    glowElements: '.scroll-percent, .badge-symbol',
+    glowElements: '.badge-symbol',
     glitchElements: '.logo-text, .badge-symbol',
     shineElements: '.project-link, .nav-menu a',
     

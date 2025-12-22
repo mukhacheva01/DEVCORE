@@ -17,8 +17,29 @@
     right: 0;
     bottom: 0;
     z-index: 0;
-    background: radial-gradient(ellipse at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    background: 
+        radial-gradient(ellipse at 30% 40%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(78, 205, 196, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(157, 78, 221, 0.08) 0%, transparent 70%),
+        linear-gradient(to bottom, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.4) 100%);
     animation: pulseGlowHero 8s ease-in-out infinite;
+    will-change: transform, opacity;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../картинки/цветовая гаммаjpg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
 }
 
 @keyframes pulseGlowHero {
@@ -35,33 +56,28 @@
 .hero-content {
     position: relative;
     z-index: 1;
-}
-
-.scroll-indicator {
-    margin-bottom: var(--space-md);
-    font-size: var(--font-size-lg);
-    color: var(--color-text-secondary);
-}
-
-.scroll-percent {
-    font-weight: 600;
+    will-change: transform, opacity;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
 }
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(40px, 8vw, 120px);
+    font-size: clamp(48px, 10vw, 140px);
     font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
+    max-width: 1200px;
 }
 
 .title-line {
-    font-size: clamp(20px, 3vw, 36px);
+    font-size: clamp(24px, 3.5vw, 42px);
     font-weight: 400;
     color: var(--color-text-secondary);
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .title-main {
@@ -71,11 +87,13 @@
 }
 
 .title-subtitle {
-    font-size: clamp(18px, 2.5vw, 32px);
+    font-size: clamp(20px, 3vw, 36px);
     font-weight: 400;
     color: var(--color-text-secondary);
-    line-height: 1.4;
-    margin-top: var(--space-sm);
-    letter-spacing: 0.05em;
+    line-height: 1.5;
+    margin-top: 0;
+    letter-spacing: -0.01em;
+    max-width: 700px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 

@@ -12,10 +12,11 @@ section {
 }
 
 .section-header {
-    font-size: clamp(32px, 5vw, 64px);
+    font-size: clamp(40px, 6vw, 72px);
     font-weight: 700;
-    margin-bottom: var(--space-lg);
-    letter-spacing: -0.02em;
+    margin-bottom: var(--space-xl);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
 }
 
 .section-title {
@@ -24,6 +25,12 @@ section {
     line-height: 1.2;
     letter-spacing: -0.02em;
     margin-bottom: var(--space-md);
+    margin-left: -150px;
+    margin-right: -150px;
+    text-align: center;
+    width: calc(100% + 300px);
+    white-space: nowrap;
+    overflow: visible;
 }
 
 /* Grid utilities */

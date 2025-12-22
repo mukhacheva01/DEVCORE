@@ -19,17 +19,40 @@ export class ContactForm {
     async handleSubmit(event) {
         event.preventDefault();
         
+        const submitButton = this.form.querySelector('.submit-button');
+        const originalText = submitButton ? submitButton.innerHTML : '';
+        
+        // Set loading state
+        if (submitButton) {
+            submitButton.classList.add('btn-loading');
+            submitButton.disabled = true;
+            submitButton.setAttribute('aria-busy', 'true');
+        }
+        
         const formData = new FormData(this.form);
         const data = Object.fromEntries(formData);
         
-        // Here you would send data to server
-        console.log('Form submitted:', data);
-        
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 500));
-        
-        this.showModal();
-        this.form.reset();
+        try {
+            // Here you would send data to server
+            console.log('Form submitted:', data);
+            
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            this.showModal();
+            this.form.reset();
+        } catch (error) {
+            console.error('Form submission error:', error);
+            // Handle error state
+        } finally {
+            // Remove loading state
+            if (submitButton) {
+                submitButton.classList.remove('btn-loading');
+                submitButton.disabled = false;
+                submitButton.removeAttribute('aria-busy');
+                submitButton.innerHTML = originalText;
+            }
+        }
     }
 
     showModal() {
