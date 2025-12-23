@@ -1,0 +1,274 @@
+/* ==================== TASKS COMPONENT ==================== */
+
+.tasks {
+    padding: var(--space-2xl) 0;
+    position: relative;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+    overflow: hidden;
+}
+
+/* Уникальный элемент - радиальные градиенты */
+.tasks::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(250, 144, 66, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.tasks::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(136, 133, 255, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.tasks .section-header {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-md);
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.task-card {
+    background: var(--color-card-bg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-md);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    min-height: 280px;
+}
+
+/* Уникальный элемент - круглая подсветка в углу */
+.task-card::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(250, 144, 66, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+.task-card:nth-child(even)::after {
+    background: radial-gradient(circle, rgba(136, 133, 255, 0.1) 0%, transparent 70%);
+    top: -50px;
+    left: -50px;
+    right: auto;
+}
+
+.task-card:hover::after {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Градиентная полоска сверху */
+.task-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Градиентный overlay */
+.task-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(250, 144, 66, 0.05) 0%, rgba(136, 133, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.task-card:hover {
+    border-color: var(--color-orange);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(250, 144, 66, 0.2);
+}
+
+.task-card:hover::before {
+    transform: scaleX(1);
+}
+
+.task-card:hover::after {
+    opacity: 1;
+}
+
+/* Иконка задачи */
+.task-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--space-sm);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    flex-shrink: 0;
+}
+
+.task-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--color-text);
+    stroke-width: 2;
+}
+
+.task-card:hover .task-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Заголовок задачи */
+.task-title {
+    font-size: clamp(16px, 1.5vw, 18px);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 var(--space-xs) 0;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    position: relative;
+    z-index: 1;
+}
+
+/* Описание задачи */
+.task-description {
+    font-size: clamp(12px, 1.2vw, 14px);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.task-card:hover .task-description {
+    color: var(--color-text);
+    opacity: 1;
+}
+
+/* Анимация появления */
+.task-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpTask 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.task-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.task-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.task-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.task-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.task-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUpTask {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tasks {
+        padding: var(--space-xl) 0;
+    }
+
+    .tasks .section-header {
+        margin-bottom: var(--space-lg);
+    }
+
+    .tasks-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .task-card {
+        padding: var(--space-md);
+    }
+
+    .task-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: var(--space-sm);
+    }
+
+    .task-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .task-title {
+        font-size: clamp(18px, 4vw, 22px);
+        margin-bottom: var(--space-xs);
+    }
+
+    .task-description {
+        font-size: clamp(13px, 2.5vw, 15px);
+    }
+}
+
+@media (max-width: 1400px) {
+    .tasks-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .task-card {
+        min-height: 260px;
+    }
+}
+

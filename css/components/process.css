@@ -1,0 +1,450 @@
+/* ==================== PROCESS COMPONENT ==================== */
+
+.process {
+    padding: var(--space-2xl) 0;
+    position: relative;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Уникальный элемент - пунктирная линия по бокам */
+.process::before {
+    content: '';
+    position: absolute;
+    left: 5%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 20px,
+        rgba(250, 144, 66, 0.2) 20px,
+        rgba(250, 144, 66, 0.2) 25px
+    );
+    pointer-events: none;
+}
+
+.process::after {
+    content: '';
+    position: absolute;
+    right: 5%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 20px,
+        rgba(136, 133, 255, 0.2) 20px,
+        rgba(136, 133, 255, 0.2) 25px
+    );
+    pointer-events: none;
+}
+
+.process-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    width: 100%;
+}
+
+.process .section-header {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+/* Сетка этапов */
+.process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.process-step-card {
+    background: var(--color-card-bg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: processCardComplete 4s ease-in-out infinite;
+}
+
+/* Комбинированная анимация: появление + плавание */
+@keyframes processCardComplete {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    40%, 60% {
+        opacity: 1;
+        transform: translateY(-8px);
+    }
+    75%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.process-step-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.process-step-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.process-step-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.process-step-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.process-step-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.process-step-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUpProcessCard {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatProcessCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Градиентная полоска сверху */
+.process-step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.process-step-card:hover {
+    border-color: var(--color-orange);
+    transform: translateY(-12px) scale(1.05) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(250, 144, 66, 0.2);
+    animation: fadeInUpProcessCard 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+.process-step-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Номер этапа */
+.process-step-card .step-number {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: pulseNumber 2s ease-in-out infinite;
+}
+
+.process-step-card:nth-child(1) .step-number {
+    animation-delay: 0s;
+}
+
+.process-step-card:nth-child(2) .step-number {
+    animation-delay: 0.15s;
+}
+
+.process-step-card:nth-child(3) .step-number {
+    animation-delay: 0.3s;
+}
+
+.process-step-card:nth-child(4) .step-number {
+    animation-delay: 0.45s;
+}
+
+.process-step-card:nth-child(5) .step-number {
+    animation-delay: 0.6s;
+}
+
+.process-step-card:nth-child(6) .step-number {
+    animation-delay: 0.75s;
+}
+
+@keyframes pulseNumber {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(250, 144, 66, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 0 8px rgba(250, 144, 66, 0);
+    }
+}
+
+.process-step-card:hover .step-number {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 8px 30px rgba(250, 144, 66, 0.4);
+    animation: none; /* Останавливаем пульсацию при hover */
+}
+
+/* Заголовок этапа */
+.process-step-card .step-title {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 var(--space-sm) 0;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    position: relative;
+    z-index: 1;
+}
+
+/* Время этапа */
+.step-time {
+    font-size: clamp(13px, 1.5vw, 15px);
+    font-weight: 600;
+    color: var(--color-orange);
+    padding: 6px 16px;
+    background: rgba(250, 144, 66, 0.1);
+    border: 1px solid rgba(250, 144, 66, 0.3);
+    border-radius: var(--border-radius-full);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    animation: slideInTime 0.8s ease-out backwards;
+}
+
+.process-step-card:nth-child(1) .step-time {
+    animation-delay: 0.3s;
+}
+
+.process-step-card:nth-child(2) .step-time {
+    animation-delay: 0.4s;
+}
+
+.process-step-card:nth-child(3) .step-time {
+    animation-delay: 0.5s;
+}
+
+.process-step-card:nth-child(4) .step-time {
+    animation-delay: 0.6s;
+}
+
+.process-step-card:nth-child(5) .step-time {
+    animation-delay: 0.7s;
+}
+
+.process-step-card:nth-child(6) .step-time {
+    animation-delay: 0.8s;
+}
+
+@keyframes slideInTime {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.process-step-card:hover .step-time {
+    background: rgba(250, 144, 66, 0.2);
+    border-color: var(--color-orange);
+    transform: scale(1.05);
+}
+
+
+@keyframes fadeInUpProcessCard {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Финальный акцент */
+.process-footer {
+    margin-top: var(--space-2xl);
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--color-card-bg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUpProcess 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s forwards;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.process-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.process-footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(250, 144, 66, 0.05) 0%, rgba(136, 133, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.process-footer:hover::after {
+    opacity: 1;
+}
+
+.process-accent {
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    background: var(--gradient-text);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeInUpProcess {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .process {
+        padding: var(--space-xl) 0;
+    }
+
+    .process-container {
+        padding: 0 var(--space-sm);
+    }
+
+    .process .section-header {
+        margin-bottom: var(--space-lg);
+    }
+
+    .process-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .process-step-card {
+        padding: var(--space-md);
+    }
+
+    .process-step-card .step-number {
+        width: 48px;
+        height: 48px;
+        font-size: clamp(18px, 4vw, 24px);
+        margin-bottom: var(--space-sm);
+    }
+
+    .process-step-card .step-title {
+        font-size: clamp(14px, 3vw, 18px);
+        margin-bottom: var(--space-xs);
+    }
+
+    .step-time {
+        font-size: clamp(12px, 2.5vw, 14px);
+        padding: 5px 12px;
+    }
+
+    .process-footer {
+        margin-top: var(--space-xl);
+        padding: var(--space-lg);
+    }
+
+    .process-accent {
+        font-size: clamp(16px, 3vw, 20px);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .process-steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

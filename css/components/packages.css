@@ -1,0 +1,378 @@
+/* ==================== PACKAGES COMPONENT ==================== */
+
+.packages {
+    padding: var(--space-2xl) 0;
+    position: relative;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+}
+
+.packages .section-header {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.package-card {
+    background: var(--color-card-bg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Уникальный элемент - блестящий эффект в углу */
+.package-card::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.05) 50%,
+        transparent 70%
+    );
+    transition: all 0.6s ease;
+    pointer-events: none;
+}
+
+.package-card:hover::after {
+    top: 0;
+    left: 0;
+}
+
+/* Дополнительный акцент - маленькая иконка в углу */
+.package-card::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    box-shadow: 0 0 10px rgba(250, 144, 66, 0.5);
+}
+
+.package-card:hover::before {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.package-popular::before {
+    opacity: 1;
+    transform: scale(1.2);
+    animation: pulsePackage 2s infinite;
+}
+
+@keyframes pulsePackage {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.5);
+    }
+}
+
+/* Градиентная полоска сверху */
+.package-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Градиентный overlay */
+.package-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(250, 144, 66, 0.05) 0%, rgba(136, 133, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.package-card:hover {
+    border-color: var(--color-orange);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(250, 144, 66, 0.2);
+}
+
+.package-card:hover::before {
+    transform: scaleX(1);
+}
+
+.package-card:hover::after {
+    opacity: 1;
+}
+
+/* Популярный пакет */
+.package-popular {
+    border-color: var(--color-orange);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(250, 144, 66, 0.2);
+}
+
+.package-popular::before {
+    transform: scaleX(1);
+    background: var(--gradient-primary);
+}
+
+.package-popular::after {
+    opacity: 0.3;
+}
+
+.package-popular:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5), 0 0 50px rgba(250, 144, 66, 0.3);
+}
+
+/* Заголовок пакета */
+.package-header {
+    margin-bottom: var(--space-lg);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.package-name {
+    font-size: clamp(28px, 3.5vw, 36px);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 var(--space-sm) 0;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.package-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.package-badge-popular {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: var(--color-text);
+    box-shadow: 0 4px 15px rgba(250, 144, 66, 0.3);
+}
+
+/* Контент пакета */
+.package-content {
+    flex: 1;
+    margin-bottom: var(--space-lg);
+    position: relative;
+    z-index: 1;
+}
+
+.package-description {
+    font-size: clamp(15px, 1.8vw, 17px);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0 0 var(--space-lg) 0;
+    text-align: center;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.package-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-xs);
+    border-radius: var(--border-radius-sm);
+    transition: background 0.3s ease;
+}
+
+.package-card:hover .package-feature {
+    background: rgba(250, 144, 66, 0.05);
+}
+
+.feature-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--color-orange);
+    transition: transform 0.3s ease;
+}
+
+.package-card:hover .feature-icon {
+    transform: scale(1.2);
+}
+
+.package-feature span {
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.package-card:hover .package-feature span {
+    color: var(--color-text);
+}
+
+/* Футер пакета */
+.package-footer {
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.package-button {
+    display: block;
+    width: 100%;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--color-card-bg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    font-size: clamp(16px, 2vw, 18px);
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.package-button:hover {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(250, 144, 66, 0.3);
+}
+
+.package-button-primary {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(250, 144, 66, 0.3);
+}
+
+.package-button-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(250, 144, 66, 0.4);
+}
+
+/* Анимация появления */
+.package-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpPackage 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.package-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.package-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.package-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUpPackage {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .package-card:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .packages {
+        padding: var(--space-xl) 0;
+    }
+
+    .packages .section-header {
+        margin-bottom: var(--space-lg);
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .package-card {
+        padding: var(--space-lg);
+    }
+
+    .package-card:nth-child(3) {
+        grid-column: 1;
+        max-width: 100%;
+    }
+
+    .package-name {
+        font-size: clamp(24px, 5vw, 32px);
+    }
+
+    .package-description {
+        font-size: clamp(14px, 2.5vw, 16px);
+        margin-bottom: var(--space-md);
+    }
+
+    .package-feature span {
+        font-size: clamp(13px, 2.5vw, 15px);
+    }
+
+    .package-button {
+        padding: var(--space-xs) var(--space-md);
+        font-size: clamp(15px, 3vw, 17px);
+    }
+}
+

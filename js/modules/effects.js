@@ -104,3 +104,5 @@ export function applyVisualEffects() {
     document.body.insertBefore(animatedBg, document.body.firstChild);
 }
 
+
+

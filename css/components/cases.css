@@ -1,0 +1,222 @@
+/* ==================== CASES COMPONENT ==================== */
+
+.cases {
+    padding: var(--space-2xl) 0;
+    position: relative;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.15) 50%, transparent 100%);
+}
+
+.case-card {
+    background: var(--color-card-bg);
+    border: 2px solid var(--color-border);
+    border-left: 4px solid transparent;
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-lg);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Уникальный элемент - вертикальная цветная полоска слева */
+.case-card:nth-child(1) {
+    border-left-color: var(--color-orange);
+}
+
+.case-card:nth-child(2) {
+    border-left-color: var(--color-blue);
+}
+
+.case-card:nth-child(3) {
+    border-left-color: var(--color-orange);
+}
+
+.case-card:hover {
+    border-left-width: 6px;
+    padding-left: calc(var(--space-lg) - 2px);
+}
+
+.cases .section-header {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Убрали градиентную полоску сверху, используем боковую */
+.case-card::before {
+    display: none;
+}
+
+/* Градиентный overlay */
+.case-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(250, 144, 66, 0.05) 0%, rgba(136, 133, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.case-card:hover {
+    border-color: var(--color-orange);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(250, 144, 66, 0.2);
+}
+
+.case-card:hover::after {
+    opacity: 1;
+}
+
+.case-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+/* Секция кейса */
+.case-section {
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    transition: border-color 0.3s ease;
+}
+
+.case-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.case-card:hover .case-section {
+    border-color: rgba(250, 144, 66, 0.2);
+}
+
+/* Метка секции */
+.case-label {
+    font-size: clamp(14px, 1.5vw, 16px);
+    font-weight: 700;
+    color: var(--color-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 var(--space-xs) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.case-label::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Текст секции */
+.case-text {
+    font-size: clamp(15px, 1.8vw, 17px);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.case-card:hover .case-text {
+    color: var(--color-text);
+}
+
+/* Анимация появления */
+.case-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpCase 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.case-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.case-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.case-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.case-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.case-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUpCase {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cases {
+        padding: var(--space-xl) 0;
+    }
+
+    .cases .section-header {
+        margin-bottom: var(--space-lg);
+    }
+
+    .cases-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .case-card {
+        padding: var(--space-md);
+    }
+
+    .case-content {
+        gap: var(--space-sm);
+    }
+
+    .case-section {
+        padding-bottom: var(--space-sm);
+    }
+
+    .case-label {
+        font-size: clamp(13px, 2.5vw, 15px);
+        margin-bottom: var(--space-xs);
+    }
+
+    .case-label::before {
+        width: 6px;
+        height: 6px;
+    }
+
+    .case-text {
+        font-size: clamp(14px, 2.5vw, 16px);
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

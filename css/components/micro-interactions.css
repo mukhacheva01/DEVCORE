@@ -34,8 +34,8 @@
 }
 
 .interactive-glow:hover {
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4),
-                0 0 40px rgba(255, 107, 53, 0.2);
+    box-shadow: 0 0 20px rgba(250, 144, 66, 0.4),
+                0 0 40px rgba(250, 144, 66, 0.2);
 }
 
 /* Bounce animation on interaction */
@@ -167,10 +167,12 @@
 
 .interactive-complete:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 10px 30px rgba(250, 144, 66, 0.3);
 }
 
 .interactive-complete:active {
     transform: translateY(-1px) scale(1);
 }
+
+
 

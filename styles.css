@@ -20,8 +20,12 @@
 @import url('css/components/stats.css');
 @import url('css/components/micro-interactions.css');
 @import url('css/components/services-filter.css');
-@import url('css/components/trusted-by.css');
 @import url('css/components/about.css');
+@import url('css/components/target-audience.css');
+@import url('css/components/tasks.css');
+@import url('css/components/cases.css');
+@import url('css/components/process.css');
+@import url('css/components/packages.css');
 
 /* Animations */
 @import url('css/animations/cursor.css');
@@ -34,6 +38,26 @@
 .services {
     text-align: center;
     overflow: visible;
+    position: relative;
+}
+
+/* Уникальный элемент - волнообразная линия внизу */
+.services::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 30px,
+            rgba(250, 144, 66, 0.1) 30px,
+            rgba(250, 144, 66, 0.1) 35px
+        );
+    pointer-events: none;
 }
 
 .services .container {
@@ -43,10 +67,12 @@
     padding-left: 10px;
     padding-right: 10px;
     overflow: visible;
+    position: relative;
+    z-index: 1;
 }
 
 .projects {
-    background: linear-gradient(180deg, transparent 0%, rgba(255, 107, 53, 0.08) 50%, rgba(78, 205, 196, 0.05) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(250, 144, 66, 0.08) 50%, rgba(136, 133, 255, 0.05) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -63,6 +89,24 @@
     background-position: center;
     background-attachment: fixed;
     opacity: 0.03;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Уникальный элемент - сетка из точек */
+.projects::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle, rgba(250, 144, 66, 0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(136, 133, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px;
+    background-position: 0 0, 25px 25px;
+    opacity: 0.3;
     z-index: 0;
     pointer-events: none;
 }
@@ -114,7 +158,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(78, 205, 196, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(250, 144, 66, 0.05) 0%, rgba(136, 133, 255, 0.05) 100%);
     opacity: 0;
     transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     pointer-events: none;
@@ -123,7 +167,7 @@
 .service-category:hover {
     border-color: var(--color-orange);
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 107, 53, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(250, 144, 66, 0.2);
 }
 
 .service-category:hover::before {
@@ -230,7 +274,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(250, 144, 66, 0.1), transparent);
     transition: left 0.5s;
 }
 
@@ -239,15 +283,15 @@
 }
 
 .service-tag:hover {
-    background: rgba(255, 107, 53, 0.15);
+    background: rgba(250, 144, 66, 0.15);
     border-color: var(--color-orange);
     color: var(--color-orange);
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+    box-shadow: 0 4px 12px rgba(250, 144, 66, 0.2);
 }
 
 .service-tag:active {
-    background: rgba(255, 107, 53, 0.2);
+    background: rgba(250, 144, 66, 0.2);
     border-color: var(--color-orange-light);
     color: var(--color-orange-light);
     transform: translateY(-1px);
