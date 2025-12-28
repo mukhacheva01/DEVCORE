@@ -25,6 +25,21 @@
     .fade-in {
         animation: fadeInUp 0.5s ease-out forwards;
     }
+    
+    /* Упрощаем анимации при скролле на мобильных */
+    .scroll-animate.is-visible,
+    .section-header.is-visible,
+    .task-card.is-visible,
+    .case-card.is-visible,
+    .package-card.is-visible,
+    .audience-column.is-visible,
+    .about-text-block.is-visible,
+    .process-step-card.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        animation: none;
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
 }
 
 /* Отключаем анимации при запросе пользователя */
@@ -43,7 +58,21 @@
     .particle {
         display: none;
     }
+    
+    /* Немедленно показываем элементы при reduced motion */
+    .scroll-animate,
+    .section-header,
+    .task-card,
+    .case-card,
+    .package-card,
+    .audience-column,
+    .about-text-block,
+    .process-step-card {
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }
+
 
 
 

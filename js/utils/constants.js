@@ -47,6 +47,9 @@ export const SELECTORS = {
     glitchElements: '.logo-text, .badge-symbol',
     shineElements: '.project-link, .nav-menu a',
     
+    // Scroll animations
+    scrollAnimateElements: '.task-card, .case-card, .package-card, .audience-column, .about-text-block, .section-header, .service-category, .project-card',
+    
     // Interactive
     rippleElements: '.cta-button, .submit-button, .tag',
     magneticElements: '.cta-button, .submit-button',

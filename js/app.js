@@ -13,7 +13,8 @@ import {
 // Animation Modules
 import {
     initScrollAnimations,
-    initAdvancedScrollAnimations
+    initAdvancedScrollAnimations,
+    initUniversalScrollAnimations
 } from './modules/animations.js';
 
 // Effect Modules
@@ -103,6 +104,9 @@ class DevCoreApp {
         initFloatingElements();
         initServicesFilter();
         initCounterAnimation();
+        
+        // Universal scroll animations for all sections
+        initUniversalScrollAnimations();
         
         // Advanced scroll animations with delay
         setTimeout(() => {
