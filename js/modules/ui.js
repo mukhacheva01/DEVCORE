@@ -128,19 +128,9 @@ export class SmartNavbar {
         
         if (currentScroll <= 0) {
             this.navbar.style.boxShadow = 'none';
-            return;
-        }
-        
-        if (currentScroll > this.lastScroll && currentScroll > 100) {
-            // Scrolling down
-            this.navbar.style.transform = 'translateY(-100%)';
         } else {
-            // Scrolling up
-            this.navbar.style.transform = 'translateY(0)';
             this.navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
         }
-        
-        this.lastScroll = currentScroll;
     }
 }
 
@@ -163,9 +153,3 @@ export function initSmartNavbar() {
     const navbar = new SmartNavbar();
     navbar.init();
 }
-
-
-
-
-
-

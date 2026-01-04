@@ -39,6 +39,8 @@ import { initParallaxHero } from './modules/parallax.js';
 import { initServicesFilter } from './modules/services-filter.js';
 import { initCounterAnimation } from './modules/counter.js';
 
+import { initPackageSelection } from './modules/packages.js';
+
 /**
  * Main Application Class
  */
@@ -82,6 +84,7 @@ class DevCoreApp {
         initSmoothScroll();
         initSmartNavbar();
         initContactForm();
+        initPackageSelection();
     }
 
     /**
@@ -154,4 +157,3 @@ window.addEventListener('resize', () => {
 });
 
 export default DevCoreApp;
-
