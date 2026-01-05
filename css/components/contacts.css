@@ -1,0 +1,37 @@
+/* Contact Cards */
+.contact-card {
+    padding: var(--space-md);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-fast);
+}
+
+.contact-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.contact-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 15px;
+}
+
+.contact-card a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    display: block;
+    margin-bottom: var(--space-xs);
+    transition: var(--transition-fast);
+}
+
+.contact-card a:hover {
+    color: var(--color-accent-secondary);
+}
+
+.contact-person {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}

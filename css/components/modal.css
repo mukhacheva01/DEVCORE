@@ -66,12 +66,7 @@
     background: var(--color-accent-secondary);
 }
 
-@media (max-width: 768px) {
-    .modal-content {
-        padding: var(--space-md) 30px;
-        margin: var(--space-sm);
-    }
-}
+
 
 
 

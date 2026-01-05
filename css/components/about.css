@@ -157,33 +157,5 @@
     margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .about {
-        padding: var(--space-xl) 0;
-    }
-    
-    .about-header {
-        margin-bottom: var(--space-lg);
-    }
-    
-    .about-title {
-        margin-bottom: var(--space-xs);
-    }
-    
-    .about-description {
-        grid-template-columns: 1fr;
-        margin-bottom: var(--space-xl);
-        gap: var(--space-md);
-    }
-    
-    .about-text-block {
-        padding: var(--space-md);
-    }
-    
-    .about-text-primary,
-    .about-text-secondary {
-        text-align: left;
-    }
-}
+
 

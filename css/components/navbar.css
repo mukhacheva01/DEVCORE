@@ -107,13 +107,5 @@
     transition: var(--transition-fast);
 }
 
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    
-    .nav-toggle {
-        display: flex;
-    }
-}
+
 

@@ -1,0 +1,620 @@
+
+/* ==================== DEVCORE RESPONSIVE STYLES ==================== */
+
+/*
+ * План по доработке мобильной версии:
+ * 1. Централизовать все медиа-запросы в этом файле.
+ * 2. Проверить каждый блок на корректное отображение на мобильных.
+ * 3. Адаптировать навигацию (бургер-меню).
+ * 4. Упростить сложные элементы для мобильных устройств.
+ * 5. Оптимизировать отступы и размеры шрифтов.
+*/
+
+/* ==================== GENERAL RULES ==================== */
+@media (max-width: 768px) {
+    body {
+        -webkit-text-size-adjust: 100%; /* Защита от авто-увеличения шрифта в Safari */
+    }
+
+    .container {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+    
+    .section-header {
+        font-size: clamp(28px, 8vw, 42px);
+    }
+
+    .section-title {
+        white-space: normal; /* Allow text to wrap */
+        word-break: normal; /* Ensure words break at appropriate points */
+        overflow-wrap: break-word; /* Break long words if necessary */
+        margin-left: 0;      /* Reset negative margin */
+        margin-right: 0;     /* Reset negative margin */
+        width: 100%;         /* Ensure it fits within the container */
+        text-align: center;  /* Keep text centered */
+        font-size: clamp(24px, 6vw, 40px); /* Adjust font size for mobile */
+    }
+}
+
+/* ==================== NAVBAR ==================== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--color-bg);
+        padding: var(--space-md) 0;
+        border-bottom: 1px solid var(--color-border);
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .nav-menu.is-active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0;
+    }
+
+    .nav-menu a {
+        padding: var(--space-sm) var(--space-md);
+        display: block;
+        width: 100%;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* ==================== HERO ==================== */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero-title {
+        font-size: clamp(32px, 10vw, 48px);
+    }
+    
+    .title-subtitle {
+        font-size: clamp(16px, 4vw, 20px);
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* ==================== GRIDS (Tasks, Cases, Packages) ==================== */
+@media (max-width: 992px) {
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== TARGET AUDIENCE ==================== */
+@media (max-width: 768px) {
+    .audience-filter-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== PROCESS ==================== */
+@media (max-width: 992px) {
+    .process-steps-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .process-steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================== FOOTER ==================== */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+}
+
+/* From css/base/layout.css */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+    
+    section {
+        padding: var(--space-lg) 0;
+    }
+    
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* From css/components/target-audience.css */
+@media (max-width: 768px) {
+    .target-audience {
+        padding: var(--space-xl) 0;
+    }
+
+    .target-audience .section-header {
+        margin-bottom: var(--space-lg);
+    }
+
+    .audience-filter-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .audience-column {
+        padding: var(--space-md);
+    }
+
+    .column-header {
+        margin-bottom: var(--space-md);
+        padding-bottom: var(--space-sm);
+    }
+
+    .column-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .column-title {
+        font-size: clamp(18px, 4vw, 24px);
+    }
+
+    .audience-list {
+        gap: var(--space-sm);
+    }
+
+    .audience-item {
+        padding: var(--space-xs);
+    }
+
+    .item-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .audience-item span {
+        font-size: clamp(14px, 2.5vw, 16px);
+    }
+
+    .audience-item:hover {
+        transform: translateX(3px);
+    }
+}
+
+/* From css/components/trusted-by.css */
+@media (max-width: 768px) {
+    .trusted-by {
+        padding: var(--space-xl) 0;
+    }
+    
+    .trusted-by .section-header {
+        margin-bottom: var(--space-lg);
+        font-size: clamp(28px, 6vw, 36px);
+    }
+    
+    .clients-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .client-logo {
+        height: 80px;
+        padding: var(--space-sm);
+    }
+}
+
+/* From css/components/stats.css */
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .stat-item {
+        padding: var(--space-md);
+    }
+    
+    .stat-index {
+        font-size: 13px;
+    }
+    
+    .stat-number {
+        font-size: clamp(36px, 8vw, 48px);
+    }
+    
+    .stat-label {
+        font-size: clamp(14px, 2vw, 18px);
+    }
+}
+
+/* From css/components/cards.css */
+@media (max-width: 768px) {
+    .project-card {
+        padding: 30px;
+    }
+}
+
+/* From css/components/packages.css */
+@media (max-width: 1024px) {
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .package-card:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .packages {
+        padding: var(--space-xl) 0;
+    }
+
+    .packages .section-header {
+        margin-bottom: var(--space-lg);
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .package-card {
+        padding: var(--space-sm);
+    }
+
+    .package-card:nth-child(3) {
+        grid-column: 1;
+        max-width: 100%;
+    }
+
+    .package-name {
+        font-size: clamp(24px, 5vw, 32px);
+    }
+
+    .package-description {
+        font-size: clamp(14px, 2.5vw, 16px);
+        margin-bottom: var(--space-md);
+    }
+
+    .package-feature span {
+        font-size: clamp(13px, 2.5vw, 15px);
+    }
+
+    .package-button {
+        padding: var(--space-xs) var(--space-md);
+        font-size: clamp(15px, 3vw, 17px);
+    }
+}
+
+@media (max-width: 768px) {
+    .package-tab-buttons {
+        flex-direction: column;
+        gap: var(--space-xs);
+        margin-bottom: var(--space-lg);
+    }
+
+    .tab-button {
+        width: 100%;
+        text-align: center;
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--font-size-base);
+    }
+}
+
+/* From css/components/modal.css */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: var(--space-md) 30px;
+        margin: var(--space-sm);
+    }
+}
+
+/* From css/components/process.css */
+@media (max-width: 768px) {
+    .process {
+        padding: var(--space-xl) 0;
+    }
+
+    .process-container {
+        padding: 0 var(--space-sm);
+    }
+
+    .process .section-header {
+        margin-bottom: var(--space-lg);
+    }
+
+    .process-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .process-step-card {
+        padding: 30px 15px 15px 15px;
+    }
+
+    .process-step-card .step-number {
+        width: 48px;
+        height: 48px;
+        font-size: clamp(18px, 4vw, 24px);
+        margin-bottom: var(--space-sm);
+    }
+
+    .process-step-card .step-title {
+        font-size: clamp(14px, 3vw, 18px);
+        margin-bottom: var(--space-xs);
+    }
+
+    .step-time {
+        font-size: clamp(12px, 2.5vw, 14px);
+        padding: 5px 12px;
+    }
+
+    .process-footer {
+        margin-top: var(--space-xl);
+        padding: var(--space-lg);
+    }
+
+    .process-accent {
+        font-size: clamp(16px, 3vw, 20px);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .process-steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* From css/components/cases.css */
+@media (max-width: 768px) {
+    .cases {
+        padding: var(--space-xl) 0;
+    }
+
+    .cases .section-header {
+        margin-bottom: var(--space-lg);
+    }
+
+
+
+    .case-card {
+        padding: var(--space-md);
+    }
+
+    .case-content {
+        gap: var(--space-sm);
+    }
+
+    .case-section {
+        padding-bottom: var(--space-sm);
+    }
+
+    .case-label {
+        font-size: clamp(13px, 2.5vw, 15px);
+        margin-bottom: var(--space-xs);
+    }
+
+    .case-label::before {
+        width: 6px;
+        height: 6px;
+    }
+
+    .case-text {
+        font-size: clamp(14px, 2.5vw, 16px);
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* From css/components/about.css */
+@media (max-width: 768px) {
+    .about {
+        padding: var(--space-xl) 0;
+    }
+    
+    .about-header {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .about-title {
+        margin-bottom: var(--space-xs);
+    }
+    
+    .about-description {
+        grid-template-columns: 1fr;
+        margin-bottom: var(--space-xl);
+        gap: var(--space-md);
+    }
+    
+    .about-text-block {
+        padding: var(--space-md);
+    }
+    
+    .about-text-primary,
+    .about-text-secondary {
+        text-align: left;
+    }
+}
+
+/* From css/components/navbar.css */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+}
+
+/* From css/components/services-filter.css */
+@media (max-width: 768px) {
+    .services-filter {
+        position: relative;
+        top: 0;
+        margin-bottom: var(--space-lg);
+        padding: var(--space-xs);
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+
+
+/* From styles.css */
+@media (max-width: 768px) {
+    .projects .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* From styles.css */
+@media (max-width: 768px) {
+    .service-category {
+        margin-bottom: var(--space-md);
+        padding: var(--space-md);
+    }
+    
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+        margin-bottom: var(--space-xs);
+    }
+    
+    .category-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .category-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .category-title {
+        margin: 0;
+        font-size: clamp(20px, 4vw, 24px);
+    }
+    
+    .category-description {
+        font-size: clamp(13px, 1.8vw, 15px);
+        margin-bottom: var(--space-sm);
+    }
+    
+    .service-tags-grid {
+        gap: 6px;
+    }
+    
+    .service-tag {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .tech-list {
+        gap: 12px;
+        margin-top: var(--space-xs);
+        padding-top: var(--space-xs);
+    }
+    
+    .tech-item {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        margin: 0 var(--space-sm);
+        padding: var(--space-md) 0;
+    }
+
+    .social-links-grid {
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+    }
+    
+    .social-links-grid .contact-card {
+        padding: var(--space-sm);
+    }
+
+    .social-links-grid .contact-card h3 {
+        font-size: var(--font-size-lg);
+        margin-top: 10px;
+    }
+
+    .social-links-grid .contact-card .contact-person {
+        font-size: var(--font-size-xs);
+    }
+
+    .social-link {
+        width: 48px;
+        height: 48px;
+    }
+
+    .social-link img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* --- Corrected Task Grid --- */
+
+/* For screens up to 1400px wide, show 3 columns */
+@media (max-width: 1400px) {
+    .tasks-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For screens up to 768px wide, show 2 columns */
+@media (max-width: 768px) {
+    .tasks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .task-card {
+        padding: 30px 15px 15px 15px;
+    }
+}
+
+
+/* From styles.css */
+@media (max-width: 480px) {
+
+}
+
+
+/* From styles.css */
+@media (max-width: 480px) {
+
+}
+

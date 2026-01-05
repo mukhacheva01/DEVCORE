@@ -162,8 +162,13 @@
     transition-delay: 0.3s;
 }
 
+/* --- TAB LOGIC --- */
+.cases-tab-buttons {
+    display: none; /* Hidden by default on desktop */
+}
+
 /* Responsive */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
     .cases {
         padding: var(--space-xl) 0;
     }
@@ -173,8 +178,73 @@
     }
 
     .cases-grid {
+        display: block; /* Override grid for mobile to enable tab view */
         grid-template-columns: 1fr;
         gap: var(--space-md);
+    }
+
+    .case-tab-content {
+        display: none; /* Hide all by default on mobile */
+    }
+
+    .case-tab-content.active {
+        display: block; /* Only show the active one on mobile */
+    }
+
+    .cases-tab-buttons {
+        display: flex; /* Show tab buttons on mobile */
+        flex-direction: row;
+        flex-wrap: nowrap; /* Ensure buttons stay in one row */
+        justify-content: space-around; /* Distribute buttons evenly */
+        margin-bottom: var(--space-lg);
+        overflow-x: auto; /* Allow horizontal scrolling if necessary (though we aim to fit) */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        padding: 0 var(--space-xs); /* Add some padding to the sides */
+    }
+
+    .cases-tab-buttons .case-tab-button {
+        flex-shrink: 0; /* Prevent buttons from shrinking */
+        width: 40px; /* Fixed width for circular shape */
+        height: 40px; /* Fixed height for circular shape */
+        border-radius: 50%; /* Make them circular */
+        display: flex; /* Use flexbox to center content */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        font-size: var(--font-size-base); /* Adjust font size for numbers */
+        padding: 0; /* Remove padding as content is centered by flex */
+        min-width: 40px; /* Ensure minimum width */
+
+        /* Styles mimicking package-button and tab-button */
+        appearance: none;
+        -webkit-appearance: none;
+        background: var(--color-card-bg);
+        border: 2px solid var(--color-border);
+        color: var(--color-text);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        outline: none;
+        font-family: var(--font-main);
+    }
+
+    .cases-tab-buttons .case-tab-button:hover {
+        background: var(--gradient-primary);
+        border-color: transparent;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(250, 144, 66, 0.3);
+        color: var(--color-text);
+    }
+
+    .cases-tab-buttons .case-tab-button.active {
+        background: var(--gradient-primary);
+        border-color: transparent;
+        color: var(--color-text);
+        box-shadow: 0 4px 15px rgba(250, 144, 66, 0.3);
+    }
+
+    .cases-tab-buttons .case-tab-button.active:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(250, 144, 66, 0.4);
     }
 
     .case-card {
@@ -205,9 +275,8 @@
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+ @media (min-width: 769px) and (max-width: 1024px) {
     .cases-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-

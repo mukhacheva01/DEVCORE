@@ -41,8 +41,10 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="#cases">Проекты</a></li>
                 <li><a href="#services">Услуги</a></li>
+                <li><a href="#tasks">Задачи</a></li>
+                <li><a href="#cases">Проекты</a></li>
+                <li><a href="#packages">Пакеты</a></li>
                 <li><a href="#about">О нас</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
@@ -81,9 +83,7 @@
                 <span class="tag">AI SOLUTIONS</span>
                 <span class="tag">CLOUD INFRASTRUCTURE</span>
             </div>
-            <h2 class="section-title">
-                Готовы к <span class="gradient-text">цифровой трансформации?</span>
-            </h2>
+            <h3 class="section-title">Готовы к цифровой трансформации?</h3>
             <a href="#contact" class="cta-button btn-icon btn-icon-right">
                 <span>Хочу работать с вами</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -234,111 +234,131 @@
     <section id="cases" class="cases">
         <div class="container">
             <h2 class="section-header">Кейсы</h2>
+            <div class="cases-tab-buttons">
+                <button class="case-tab-button active" data-tab="case-1">1</button>
+                <button class="case-tab-button" data-tab="case-2">2</button>
+                <button class="case-tab-button" data-tab="case-3">3</button>
+                <button class="case-tab-button" data-tab="case-4">4</button>
+                <button class="case-tab-button" data-tab="case-5">5</button>
+                <button class="case-tab-button" data-tab="case-6">6</button>
+            </div>
             <div class="cases-grid">
-                <!-- Кейс 4 -->
-                <div class="case-card">
-                    <div class="case-content">
-                        <div class="case-section">
-                            <h3 class="case-label">Проблема</h3>
-                            <p class="case-text">Команда селлера тратила много времени на ручной сбор отчётности для инвесторов из разных источников. Данные быстро устаревали, процесс был долгим и подвержен ошибкам.</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Решение</h3>
-                            <p class="case-text">Веб-дашборд с автоматическим обновлением данных. Собирает метрики из базы маркетплейсов, визуализирует ключевые показатели в виде графиков и показывает актуальную картину в реальном времени.</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Почему важно</h3>
-                            <p class="case-text">Отчёты перестали собираться вручную. Теперь показатели можно показать инвестору за минуту. Данные стали честными, актуальными и наглядными, что упростило коммуникацию и контроль.</p>
+                <!-- Кейс 1 -->
+                <div class="case-tab-content active" id="case-1">
+                    <div class="case-card">
+                        <div class="case-content">
+                            <div class="case-section">
+                                <h3 class="case-label">Проблема</h3>
+                                <p class="case-text">Ручная обработка заявок и общение с клиентами занимала большую часть рабочего времени сотрудников</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Решение</h3>
+                                <p class="case-text">Автоматизированный бот в Telegram обрабатывает первичные запросы, собирает данные, квалифицирует лиды и передает горячих клиентов менеджерам</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Почему важно</h3>
+                                <p class="case-text">Менеджеры фокусируются на продажах, а не на рутине. Время обработки заявок сократилось в 3 раза, конверсия выросла на 40%</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Кейс 2 -->
-                <div class="case-card">
-                    <div class="case-content">
-                        <div class="case-section">
-                            <h3 class="case-label">Проблема</h3>
-                            <p class="case-text">Сотрудникам требовалось много времени на поиск информации в разных системах и документах</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Решение</h3>
-                            <p class="case-text">AI-ассистент на базе RAG технологии объединил все внутренние базы знаний и отвечает на вопросы сотрудников мгновенно</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Почему важно</h3>
-                            <p class="case-text">Сокращение времени на поиск информации с 15 минут до 30 секунд. Новые сотрудники быстрее входят в работу</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Кейс 6 -->
-                <div class="case-card">
-                    <div class="case-content">
-                        <div class="case-section">
-                            <h3 class="case-label">Проблема</h3>
-                            <p class="case-text">Проверка знаний новых сотрудников проводилась вручную, отнимая время руководителей. Не было единой статистики, сложно было проверять сразу много человек.</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Решение</h3>
-                            <p class="case-text">Телеграм бот проведения аттестации, полностью управляемого через Google Таблицы. Задаёт вопросы, фиксирует результаты и позволяет проводить тестирование параллельно для любого количества сотрудников.</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Почему важно</h3>
-                            <p class="case-text">Руководители и HR перестали тратить время на ручные проверки. Появилась прозрачная история тестов, а процесс онбординга и аттестации стал быстрым и легко масштабируемым.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Кейс 1 -->
-                <div class="case-card">
-                    <div class="case-content">
-                        <div class="case-section">
-                            <h3 class="case-label">Проблема</h3>
-                            <p class="case-text">Ручная обработка заявок и общение с клиентами занимала большую часть рабочего времени сотрудников</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Решение</h3>
-                            <p class="case-text">Автоматизированный бот в Telegram обрабатывает первичные запросы, собирает данные, квалифицирует лиды и передает горячих клиентов менеджерам</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Почему важно</h3>
-                            <p class="case-text">Менеджеры фокусируются на продажах, а не на рутине. Время обработки заявок сократилось в 3 раза, конверсия выросла на 40%</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Кейс 5 -->
-                <div class="case-card">
-                    <div class="case-content">
-                        <div class="case-section">
-                            <h3 class="case-label">Проблема</h3>
-                            <p class="case-text">Продажи подписок на цифровой сервис шли вручную через чаты, что приводило к ошибкам, перегруженности менеджеров и плохой масштабируемости.</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Решение</h3>
-                            <p class="case-text">Телеграм-бот, автоматизирующий процесс: приём оплат, автоматическую выдачу доступа, управление подписками, реферальную систему и сбор статистики.</p>
-                        </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Почему важно</h3>
-                            <p class="case-text">Продажи стали быстрее и стабильнее, ручная работа практически исчезла. Появилась аналитика и полный контроль. Бот создал готовый к масштабированию канал продаж прямо в мессенджере.</p>
+                <div class="case-tab-content" id="case-2">
+                    <div class="case-card">
+                        <div class="case-content">
+                            <div class="case-section">
+                                <h3 class="case-label">Проблема</h3>
+                                <p class="case-text">Сотрудникам требовалось много времени на поиск информации в разных системах и документах</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Решение</h3>
+                                <p class="case-text">AI-ассистент на базе RAG технологии объединил все внутренние базы знаний и отвечает на вопросы сотрудников мгновенно</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Почему важно</h3>
+                                <p class="case-text">Сокращение времени на поиск информации с 15 минут до 30 секунд. Новые сотрудники быстрее входят в работу</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Кейс 3 -->
-                <div class="case-card">
-                    <div class="case-content">
-                        <div class="case-section">
-                            <h3 class="case-label">Проблема</h3>
-                            <p class="case-text">Продавец на маркетплейсе тратил по 2-3 часа в день на ручную проверку остатков, цен и отзывов</p>
+                <div class="case-tab-content" id="case-3">
+                    <div class="case-card">
+                        <div class="case-content">
+                            <div class="case-section">
+                                <h3 class="case-label">Проблема</h3>
+                                <p class="case-text">Продавец на маркетплейсе тратил по 2-3 часа в день на ручную проверку остатков, цен и отзывов</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Решение</h3>
+                                <p class="case-text">Автоматизация мониторинга маркетплейса: уведомления о низких остатках, автоматическое обновление цен, сбор и анализ отзывов</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Почему важно</h3>
+                                <p class="case-text">Освободилось 10+ часов в неделю для работы с ассортиментом и маркетингом. Продажи выросли за счет оперативного реагирования</p>
+                            </div>
                         </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Решение</h3>
-                            <p class="case-text">Автоматизация мониторинга маркетплейса: уведомления о низких остатках, автоматическое обновление цен, сбор и анализ отзывов</p>
+                    </div>
+                </div>
+
+                <!-- Кейс 4 -->
+                <div class="case-tab-content" id="case-4">
+                    <div class="case-card">
+                        <div class="case-content">
+                            <div class="case-section">
+                                <h3 class="case-label">Проблема</h3>
+                                <p class="case-text">Команда селлера тратила много времени на ручной сбор отчётности для инвесторов из разных источников. Данные быстро устаревали, процесс был долгим и подвержен ошибкам.</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Решение</h3>
+                                <p class="case-text">Веб-дашборд с автоматическим обновлением данных. Собирает метрики из базы маркетплейсов, визуализирует ключевые показатели в виде графиков и показывает актуальную картину в реальном времени.</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Почему важно</h3>
+                                <p class="case-text">Отчёты перестали собираться вручную. Теперь показатели можно показать инвестору за минуту. Данные стали честными, актуальными и наглядными, что упростило коммуникацию и контроль.</p>
+                            </div>
                         </div>
-                        <div class="case-section">
-                            <h3 class="case-label">Почему важно</h3>
-                            <p class="case-text">Освободилось 10+ часов в неделю для работы с ассортиментом и маркетингом. Продажи выросли за счет оперативного реагирования</p>
+                    </div>
+                </div>
+
+                <!-- Кейс 5 -->
+                <div class="case-tab-content" id="case-5">
+                    <div class="case-card">
+                        <div class="case-content">
+                            <div class="case-section">
+                                <h3 class="case-label">Проблема</h3>
+                                <p class="case-text">Продажи подписок на цифровой сервис шли вручную через чаты, что приводило к ошибкам, перегруженности менеджеров и плохой масштабируемости.</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Решение</h3>
+                                <p class="case-text">Телеграм-бот, автоматизирующий процесс: приём оплат, автоматическую выдачу доступа, управление подписками, реферальную систему и сбор статистики.</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Почему важно</h3>
+                                <p class="case-text">Продажи стали быстрее и стабильнее, ручная работа практически исчезла. Появилась аналитика и полный контроль. Бот создал готовый к масштабированию канал продаж прямо в мессенджере.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кейс 6 -->
+                <div class="case-tab-content" id="case-6">
+                    <div class="case-card">
+                        <div class="case-content">
+                            <div class="case-section">
+                                <h3 class="case-label">Проблема</h3>
+                                <p class="case-text">Проверка знаний новых сотрудников проводилась вручную, отнимая время руководителей. Не было единой статистики, сложно было проверять сразу много человек.</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Решение</h3>
+                                <p class="case-text">Телеграм бот проведения аттестации, полностью управляемого через Google Таблицы. Задаёт вопросы, фиксирует результаты и позволяет проводить тестирование параллельно для любого количества сотрудников.</p>
+                            </div>
+                            <div class="case-section">
+                                <h3 class="case-label">Почему важно</h3>
+                                <p class="case-text">Руководители и HR перестали тратить время на ручные проверки. Появилась прозрачная история тестов, а процесс онбординга и аттестации стал быстрым и легко масштабируемым.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -368,7 +388,7 @@
                 <!-- Этап 3 -->
                 <div class="process-step-card">
                     <div class="step-number">3</div>
-                    <h3 class="step-title">Считаем стоимость **по ценности**, а не по часам</h3>
+                    <h3 class="step-title">Считаем стоимость по ценности, а не по часам</h3>
                     <span class="step-time">1 час</span>
                 </div>
 
@@ -792,7 +812,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-copy">
-                    <p>© 2025 DevCore. Все права защищены.</p>
+                    <p>© 2026 DevCore. Все права защищены.</p>
                 </div>
             </div>
         </div>

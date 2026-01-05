@@ -89,20 +89,5 @@ section {
 .mt-lg { margin-top: var(--space-lg); }
 .mt-xl { margin-top: var(--space-xl); }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 var(--space-sm);
-    }
-    
-    section {
-        padding: var(--space-lg) 0;
-    }
-    
-    .grid-2,
-    .grid-3,
-    .grid-4 {
-        grid-template-columns: 1fr;
-    }
-}
+
 

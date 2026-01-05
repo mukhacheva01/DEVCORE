@@ -133,26 +133,7 @@
     margin-right: var(--space-lg);
 }
 
-@media (max-width: 768px) {
-    .trusted-by {
-        padding: var(--space-xl) 0;
-    }
-    
-    .trusted-by .section-header {
-        margin-bottom: var(--space-lg);
-        font-size: clamp(28px, 6vw, 36px);
-    }
-    
-    .clients-logos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-    }
-    
-    .client-logo {
-        height: 80px;
-        padding: var(--space-sm);
-    }
-}
+
 
 
 

@@ -40,6 +40,7 @@ import { initServicesFilter } from './modules/services-filter.js';
 import { initCounterAnimation } from './modules/counter.js';
 
 import { initPackageSelection } from './modules/packages.js';
+import { initCasesTabs } from './modules/cases.js';
 
 /**
  * Main Application Class
@@ -85,6 +86,7 @@ class DevCoreApp {
         initSmartNavbar();
         initContactForm();
         initPackageSelection();
+        initCasesTabs();
     }
 
     /**
