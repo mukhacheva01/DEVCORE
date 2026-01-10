@@ -126,7 +126,7 @@
 
 /* Текст секции */
 .case-text {
-    font-size: clamp(15px, 1.8vw, 17px);
+    font-size: clamp(16px, 1.9vw, 18px);
     color: var(--color-text-secondary);
     line-height: 1.7;
     margin: 0;
@@ -270,7 +270,7 @@
     }
 
     .case-text {
-        font-size: clamp(14px, 2.5vw, 16px);
+        font-size: clamp(15px, 2.6vw, 17px);
         line-height: 1.6;
     }
 }

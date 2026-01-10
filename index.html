@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevCore — Цифровые решения нового поколения</title>
+    <title data-i18n="meta_title">DevCore — Цифровые решения нового поколения</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="DevCore — автоматизация бизнес-процессов и продаж через Telegram, Web3 и AI. Разработка решений для автоматизации, веб-приложений, мобильных приложений.">
-    <meta name="keywords" content="веб-разработка, мобильные приложения, UI/UX дизайн, цифровая трансформация, DevCore">
+    <meta name="description" data-i18n="meta_description" content="DevCore — автоматизация бизнес-процессов и продаж через Telegram, Web3 и AI. Разработка решений для автоматизации, веб-приложений, мобильных приложений.">
+    <meta name="keywords" data-i18n="meta_keywords" content="веб-разработка, мобильные приложения, UI/UX дизайн, цифровая трансформация, DevCore">
     <meta name="author" content="DevCore">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devcore.dev/">
-    <meta property="og:title" content="DevCore — Цифровые решения нового поколения">
-    <meta property="og:description" content="Автоматизируем бизнес-процессы и продажи через Telegram, Web3 и AI">
+    <meta property="og:title" data-i18n="meta_title" content="DevCore — Цифровые решения нового поколения">
+    <meta property="og:description" data-i18n="meta_description" content="Автоматизируем бизнес-процессы и продажи через Telegram, Web3 и AI">
     <meta property="og:image" content="картинки/логотип.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://devcore.dev/">
-    <meta property="twitter:title" content="DevCore — Цифровые решения нового поколения">
-    <meta property="twitter:description" content="Автоматизируем бизнес-процессы и продажи через Telegram, Web3 и AI">
+    <meta property="twitter:title" data-i18n="meta_title" content="DevCore — Цифровые решения нового поколения">
+    <meta property="twitter:description" data-i18n="meta_description" content="Автоматизируем бизнес-процессы и продажи через Telegram, Web3 и AI">
     <meta property="twitter:image" content="картинки/логотип.jpg">
     
     <!-- Favicon -->
@@ -41,12 +41,13 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#tasks">Задачи</a></li>
-                <li><a href="#cases">Проекты</a></li>
-                <li><a href="#packages">Пакеты</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#services" data-i18n="nav_services">Услуги</a></li>
+                <li><a href="#tasks" data-i18n="nav_tasks">Задачи</a></li>
+                <li><a href="#cases" data-i18n="nav_cases">Проекты</a></li>
+                <li><a href="#packages" data-i18n="nav_packages">Пакеты</a></li>
+                <li><a href="#about" data-i18n="nav_about">О нас</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
+                <li><button id="lang-switcher" class="lang-switcher-btn">EN</button></li>
             </ul>
             <button class="nav-toggle">
                 <span></span>
@@ -61,11 +62,11 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="title-line">Привет, это</span>
+                    <span class="title-line" data-i18n="hero_greeting">Привет, это</span>
                     <span class="title-main">
-                        <span class="gradient-text">DEVCORE</span>
+                        <span class="gradient-text" data-i18n="hero_main_title">DEVCORE</span>
                     </span>
-                    <span class="title-subtitle">Автоматизируем бизнес-процессы и продажи через Telegram, Web3 и AI</span>
+                    <span class="title-subtitle" data-i18n="hero_subtitle">Автоматизируем бизнес-процессы и продажи через Telegram, Web3 и AI</span>
                 </h1>
             </div>
         </div>
@@ -76,16 +77,16 @@
     <section id="services" class="services">
         <div class="container">
             <div class="services-tags">
-                <span class="tag">WEB DEVELOPMENT</span>
-                <span class="tag">MOBILE APPS</span>
-                <span class="tag">UI/UX DESIGN</span>
-                <span class="tag">BRANDING</span>
-                <span class="tag">AI SOLUTIONS</span>
-                <span class="tag">CLOUD INFRASTRUCTURE</span>
+                <span class="tag" data-i18n="services_tag_web">WEB DEVELOPMENT</span>
+                <span class="tag" data-i18n="services_tag_mobile">MOBILE APPS</span>
+                <span class="tag" data-i18n="services_tag_uiux">UI/UX DESIGN</span>
+                <span class="tag" data-i18n="services_tag_branding">BRANDING</span>
+                <span class="tag" data-i18n="services_tag_ai">AI SOLUTIONS</span>
+                <span class="tag" data-i18n="services_tag_cloud">CLOUD INFRASTRUCTURE</span>
             </div>
-            <h3 class="section-title">Готовы к цифровой трансформации?</h3>
+            <h3 class="section-title" data-i18n="services_title">Готовы к цифровой трансформации?</h3>
             <a href="#contact" class="cta-button btn-icon btn-icon-right">
-                <span>Хочу работать с вами</span>
+                <span data-i18n="services_cta">Хочу работать с вами</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -96,7 +97,7 @@
     <!-- Блок фильтрации: Для кого подойдёт / Кому не подойдёт -->
     <section id="target-audience" class="target-audience">
         <div class="container">
-            <h2 class="section-header">Мы работаем с бизнесами, где автоматизация — инвестиция</h2>
+            <h2 class="section-header" data-i18n="audience_header">Мы работаем с бизнесами, где автоматизация — инвестиция</h2>
             <div class="audience-filter-grid">
                 <!-- Колонка 1: Для кого подойдёт -->
                 <div class="audience-column audience-column-fit">
@@ -104,32 +105,32 @@
                         <svg class="column-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <h3 class="column-title">Для кого подойдёт</h3>
+                        <h3 class="column-title" data-i18n="audience_fit_title">Для кого подойдёт</h3>
                     </div>
                     <ul class="audience-list">
                         <li class="audience-item">
                             <svg class="item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>маркетплейс-селлеры</span>
+                            <span data-i18n="audience_fit_1">маркетплейс-селлеры</span>
                         </li>
                         <li class="audience-item">
                             <svg class="item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>бизнесы с операционкой</span>
+                            <span data-i18n="audience_fit_2">бизнесы с операционкой</span>
                         </li>
                         <li class="audience-item">
                             <svg class="item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>логистика, сервисы, B2B</span>
+                            <span data-i18n="audience_fit_3">логистика, сервисы, B2B</span>
                         </li>
                         <li class="audience-item">
                             <svg class="item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>команды, где есть данные, заявки, сотрудники</span>
+                            <span data-i18n="audience_fit_4">команды, где есть данные, заявки, сотрудники</span>
                         </li>
                     </ul>
                 </div>
@@ -140,26 +141,26 @@
                         <svg class="column-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <h3 class="column-title">Кому не подойдёт</h3>
+                        <h3 class="column-title" data-i18n="audience_not_fit_title">Кому не подойдёт</h3>
                     </div>
                     <ul class="audience-list">
                         <li class="audience-item">
                             <svg class="item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>если нужен "просто бот"</span>
+                            <span data-i18n="audience_not_fit_1">если нужен "просто бот"</span>
                         </li>
                         <li class="audience-item">
                             <svg class="item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>если нет бюджета на автоматизацию</span>
+                            <span data-i18n="audience_not_fit_2">если нет бюджета на автоматизацию</span>
                         </li>
                         <li class="audience-item">
                             <svg class="item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>если решение принимается только по цене</span>
+                            <span data-i18n="audience_not_fit_3">если решение принимается только по цене</span>
                         </li>
                     </ul>
                 </div>
@@ -170,7 +171,7 @@
     <!-- Какие задачи решаем -->
     <section id="tasks" class="tasks">
         <div class="container">
-            <h2 class="section-header">Какие задачи решаем</h2>
+            <h2 class="section-header" data-i18n="tasks_header">Какие задачи решаем</h2>
             <div class="tasks-grid">
                 <!-- Задача 1: Автоматическая лидогенерация -->
                 <div class="task-card">
@@ -179,8 +180,8 @@
                             <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="task-title">Автоматическая лидогенерация</h3>
-                    <p class="task-description">Поиск клиентов в Telegram / VK / открытых источниках</p>
+                    <h3 class="task-title" data-i18n="task_1_title">Автоматическая лидогенерация</h3>
+                    <p class="task-description" data-i18n="task_1_desc">Поиск клиентов в Telegram / VK / открытых источниках</p>
                 </div>
 
                 <!-- Задача 2: AI-ассистенты (RAG) -->
@@ -190,8 +191,8 @@
                             <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="task-title">AI-ассистенты (RAG)</h3>
-                    <p class="task-description">Внутренние базы знаний, аналитика, ответы по данным</p>
+                    <h3 class="task-title" data-i18n="task_2_title">AI-ассистенты (RAG)</h3>
+                    <p class="task-description" data-i18n="task_2_desc">Внутренние базы знаний, аналитика, ответы по данным</p>
                 </div>
 
                 <!-- Задача 3: Управление маркетплейсами -->
@@ -201,8 +202,8 @@
                             <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="task-title">Управление маркетплейсами</h3>
-                    <p class="task-description">Уведомления, остатки, отзывы, аналитика</p>
+                    <h3 class="task-title" data-i18n="task_3_title">Управление маркетплейсами</h3>
+                    <p class="task-description" data-i18n="task_3_desc">Уведомления, остатки, отзывы, аналитика</p>
                 </div>
 
                 <!-- Задача 4: Продажи и подписки в Telegram -->
@@ -212,8 +213,8 @@
                             <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="task-title">Продажи и подписки в Telegram</h3>
-                    <p class="task-description">Оплаты, доступы, рефералы</p>
+                    <h3 class="task-title" data-i18n="task_4_title">Продажи и подписки в Telegram</h3>
+                    <p class="task-description" data-i18n="task_4_desc">Оплаты, доступы, рефералы</p>
                 </div>
 
                 <!-- Задача 5: Онбординг и обучение сотрудников -->
@@ -223,8 +224,8 @@
                             <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="task-title">Онбординг и обучение сотрудников</h3>
-                    <p class="task-description">Тесты, аттестации, контроль знаний</p>
+                    <h3 class="task-title" data-i18n="task_5_title">Онбординг и обучение сотрудников</h3>
+                    <p class="task-description" data-i18n="task_5_desc">Тесты, аттестации, контроль знаний</p>
                 </div>
             </div>
         </div>
@@ -233,7 +234,7 @@
     <!-- Кейсы -->
     <section id="cases" class="cases">
         <div class="container">
-            <h2 class="section-header">Кейсы</h2>
+            <h2 class="section-header" data-i18n="cases_header">Кейсы</h2>
             <div class="cases-tab-buttons">
                 <button class="case-tab-button active" data-tab="case-1">1</button>
                 <button class="case-tab-button" data-tab="case-2">2</button>
@@ -248,16 +249,16 @@
                     <div class="case-card">
                         <div class="case-content">
                             <div class="case-section">
-                                <h3 class="case-label">Проблема</h3>
-                                <p class="case-text">Ручная обработка заявок и общение с клиентами занимала большую часть рабочего времени сотрудников</p>
+                                <h3 class="case-label" data-i18n="case_1_problem_label">Проблема</h3>
+                                <p class="case-text" data-i18n="case_1_problem_text">Ручная обработка заявок и общение с клиентами занимала большую часть рабочего времени сотрудников</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Решение</h3>
-                                <p class="case-text">Автоматизированный бот в Telegram обрабатывает первичные запросы, собирает данные, квалифицирует лиды и передает горячих клиентов менеджерам</p>
+                                <h3 class="case-label" data-i18n="case_1_solution_label">Решение</h3>
+                                <p class="case-text" data-i18n="case_1_solution_text">Автоматизированный бот в Telegram обрабатывает первичные запросы, собирает данные, квалифицирует лиды и передает горячих клиентов менеджерам</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Почему важно</h3>
-                                <p class="case-text">Менеджеры фокусируются на продажах, а не на рутине. Время обработки заявок сократилось в 3 раза, конверсия выросла на 40%</p>
+                                <h3 class="case-label" data-i18n="case_1_why_label">Почему важно</h3>
+                                <p class="case-text" data-i18n="case_1_why_text">Менеджеры фокусируются на продажах, а не на рутине. Время обработки заявок сократилось в 3 раза, конверсия выросла на 40%</p>
                             </div>
                         </div>
                     </div>
@@ -268,16 +269,16 @@
                     <div class="case-card">
                         <div class="case-content">
                             <div class="case-section">
-                                <h3 class="case-label">Проблема</h3>
-                                <p class="case-text">Сотрудникам требовалось много времени на поиск информации в разных системах и документах</p>
+                                <h3 class="case-label" data-i18n="case_2_problem_label">Проблема</h3>
+                                <p class="case-text" data-i18n="case_2_problem_text">Сотрудникам требовалось много времени на поиск информации в разных системах и документах</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Решение</h3>
-                                <p class="case-text">AI-ассистент на базе RAG технологии объединил все внутренние базы знаний и отвечает на вопросы сотрудников мгновенно</p>
+                                <h3 class="case-label" data-i18n="case_2_solution_label">Решение</h3>
+                                <p class="case-text" data-i18n="case_2_solution_text">AI-ассистент на базе RAG технологии объединил все внутренние базы знаний и отвечает на вопросы сотрудников мгновенно</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Почему важно</h3>
-                                <p class="case-text">Сокращение времени на поиск информации с 15 минут до 30 секунд. Новые сотрудники быстрее входят в работу</p>
+                                <h3 class="case-label" data-i18n="case_2_why_label">Почему важно</h3>
+                                <p class="case-text" data-i18n="case_2_why_text">Сокращение времени на поиск информации с 15 минут до 30 секунд. Новые сотрудники быстрее входят в работу</p>
                             </div>
                         </div>
                     </div>
@@ -288,16 +289,16 @@
                     <div class="case-card">
                         <div class="case-content">
                             <div class="case-section">
-                                <h3 class="case-label">Проблема</h3>
-                                <p class="case-text">Продавец на маркетплейсе тратил по 2-3 часа в день на ручную проверку остатков, цен и отзывов</p>
+                                <h3 class="case-label" data-i18n="case_3_problem_label">Проблема</h3>
+                                <p class="case-text" data-i18n="case_3_problem_text">Продавец на маркетплейсе тратил по 2-3 часа в день на ручную проверку остатков, цен и отзывов</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Решение</h3>
-                                <p class="case-text">Автоматизация мониторинга маркетплейса: уведомления о низких остатках, автоматическое обновление цен, сбор и анализ отзывов</p>
+                                <h3 class="case-label" data-i18n="case_3_solution_label">Решение</h3>
+                                <p class="case-text" data-i18n="case_3_solution_text">Автоматизация мониторинга маркетплейса: уведомления о низких остатках, автоматическое обновление цен, сбор и анализ отзывов</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Почему важно</h3>
-                                <p class="case-text">Освободилось 10+ часов в неделю для работы с ассортиментом и маркетингом. Продажи выросли за счет оперативного реагирования</p>
+                                <h3 class="case-label" data-i18n="case_3_why_label">Почему важно</h3>
+                                <p class="case-text" data-i18n="case_3_why_text">Освободилось 10+ часов в неделю для работы с ассортиментом и маркетингом. Продажи выросли за счет оперативного реагирования</p>
                             </div>
                         </div>
                     </div>
@@ -308,16 +309,16 @@
                     <div class="case-card">
                         <div class="case-content">
                             <div class="case-section">
-                                <h3 class="case-label">Проблема</h3>
-                                <p class="case-text">Команда селлера тратила много времени на ручной сбор отчётности для инвесторов из разных источников. Данные быстро устаревали, процесс был долгим и подвержен ошибкам.</p>
+                                <h3 class="case-label" data-i18n="case_4_problem_label">Проблема</h3>
+                                <p class="case-text" data-i18n="case_4_problem_text">Команда селлера тратила много времени на ручной сбор отчётности для инвесторов из разных источников. Данные быстро устаревали, процесс был долгим и подвержен ошибкам.</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Решение</h3>
-                                <p class="case-text">Веб-дашборд с автоматическим обновлением данных. Собирает метрики из базы маркетплейсов, визуализирует ключевые показатели в виде графиков и показывает актуальную картину в реальном времени.</p>
+                                <h3 class="case-label" data-i18n="case_4_solution_label">Решение</h3>
+                                <p class="case-text" data-i18n="case_4_solution_text">Веб-дашборд с автоматическим обновлением данных. Собирает метрики из базы маркетплейсов, визуализирует ключевые показатели в виде графиков и показывает актуальную картину в реальном времени.</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Почему важно</h3>
-                                <p class="case-text">Отчёты перестали собираться вручную. Теперь показатели можно показать инвестору за минуту. Данные стали честными, актуальными и наглядными, что упростило коммуникацию и контроль.</p>
+                                <h3 class="case-label" data-i18n="case_4_why_label">Почему важно</h3>
+                                <p class="case-text" data-i18n="case_4_why_text">Отчёты перестали собираться вручную. Теперь показатели можно показать инвестору за минуту. Данные стали честными, актуальными и наглядными, что упростило коммуникацию и контроль.</p>
                             </div>
                         </div>
                     </div>
@@ -328,16 +329,16 @@
                     <div class="case-card">
                         <div class="case-content">
                             <div class="case-section">
-                                <h3 class="case-label">Проблема</h3>
-                                <p class="case-text">Продажи подписок на цифровой сервис шли вручную через чаты, что приводило к ошибкам, перегруженности менеджеров и плохой масштабируемости.</p>
+                                <h3 class="case-label" data-i18n="case_5_problem_label">Проблема</h3>
+                                <p class="case-text" data-i18n="case_5_problem_text">Продажи подписок на цифровой сервис шли вручную через чаты, что приводило к ошибкам, перегруженности менеджеров и плохой масштабируемости.</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Решение</h3>
-                                <p class="case-text">Телеграм-бот, автоматизирующий процесс: приём оплат, автоматическую выдачу доступа, управление подписками, реферальную систему и сбор статистики.</p>
+                                <h3 class="case-label" data-i18n="case_5_solution_label">Решение</h3>
+                                <p class="case-text" data-i18n="case_5_solution_text">Телеграм-бот, автоматизирующий процесс: приём оплат, автоматическую выдачу доступа, управление подписками, реферальную систему и сбор статистики.</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Почему важно</h3>
-                                <p class="case-text">Продажи стали быстрее и стабильнее, ручная работа практически исчезла. Появилась аналитика и полный контроль. Бот создал готовый к масштабированию канал продаж прямо в мессенджере.</p>
+                                <h3 class="case-label" data-i18n="case_5_why_label">Почему важно</h3>
+                                <p class="case-text" data-i18n="case_5_why_text">Продажи стали быстрее и стабильнее, ручная работа практически исчезла. Появилась аналитика и полный контроль. Бот создал готовый к масштабированию канал продаж прямо в мессенджере.</p>
                             </div>
                         </div>
                     </div>
@@ -348,16 +349,16 @@
                     <div class="case-card">
                         <div class="case-content">
                             <div class="case-section">
-                                <h3 class="case-label">Проблема</h3>
-                                <p class="case-text">Проверка знаний новых сотрудников проводилась вручную, отнимая время руководителей. Не было единой статистики, сложно было проверять сразу много человек.</p>
+                                <h3 class="case-label" data-i18n="case_6_problem_label">Проблема</h3>
+                                <p class="case-text" data-i18n="case_6_problem_text">Проверка знаний новых сотрудников проводилась вручную, отнимая время руководителей. Не было единой статистики, сложно было проверять сразу много человек.</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Решение</h3>
-                                <p class="case-text">Телеграм бот проведения аттестации, полностью управляемого через Google Таблицы. Задаёт вопросы, фиксирует результаты и позволяет проводить тестирование параллельно для любого количества сотрудников.</p>
+                                <h3 class="case-label" data-i18n="case_6_solution_label">Решение</h3>
+                                <p class="case-text" data-i18n="case_6_solution_text">Телеграм бот проведения аттестации, полностью управляемого через Google Таблицы. Задаёт вопросы, фиксирует результаты и позволяет проводить тестирование параллельно для любого количества сотрудников.</p>
                             </div>
                             <div class="case-section">
-                                <h3 class="case-label">Почему важно</h3>
-                                <p class="case-text">Руководители и HR перестали тратить время на ручные проверки. Появилась прозрачная история тестов, а процесс онбординга и аттестации стал быстрым и легко масштабируемым.</p>
+                                <h3 class="case-label" data-i18n="case_6_why_label">Почему важно</h3>
+                                <p class="case-text" data-i18n="case_6_why_text">Руководители и HR перестали тратить время на ручные проверки. Появилась прозрачная история тестов, а процесс онбординга и аттестации стал быстрым и легко масштабируемым.</p>
                             </div>
                         </div>
                     </div>
@@ -369,52 +370,52 @@
     <!-- Как мы работаем -->
     <section id="process" class="process">
         <div class="process-container">
-            <h2 class="section-header">Как мы работаем</h2>
+            <h2 class="section-header" data-i18n="process_header">Как мы работаем</h2>
             <div class="process-steps-grid">
                 <!-- Этап 1 -->
                 <div class="process-step-card">
                     <div class="step-number">1</div>
-                    <h3 class="step-title">Разбираем задачу и бизнес-цель</h3>
-                    <span class="step-time">3 часа</span>
+                    <h3 class="step-title" data-i18n="process_step_1_title">Разбираем задачу и бизнес-цель</h3>
+                    <span class="step-time" data-i18n="process_step_1_time">3 часа</span>
                 </div>
 
                 <!-- Этап 2 -->
                 <div class="process-step-card">
                     <div class="step-number">2</div>
-                    <h3 class="step-title">Предлагаем решение и фиксируем результат</h3>
-                    <span class="step-time">2 часа</span>
+                    <h3 class="step-title" data-i18n="process_step_2_title">Предлагаем решение и фиксируем результат</h3>
+                    <span class="step-time" data-i18n="process_step_2_time">2 часа</span>
                 </div>
 
                 <!-- Этап 3 -->
                 <div class="process-step-card">
                     <div class="step-number">3</div>
-                    <h3 class="step-title">Считаем стоимость по ценности, а не по часам</h3>
-                    <span class="step-time">1 час</span>
+                    <h3 class="step-title" data-i18n="process_step_3_title">Считаем стоимость по ценности, а не по часам</h3>
+                    <span class="step-time" data-i18n="process_step_3_time">1 час</span>
                 </div>
 
                 <!-- Этап 4 -->
                 <div class="process-step-card">
                     <div class="step-number">4</div>
-                    <h3 class="step-title">Показываем прототипы и демо</h3>
-                    <span class="step-time">По ходу</span>
+                    <h3 class="step-title" data-i18n="process_step_4_title">Показываем прототипы и демо</h3>
+                    <span class="step-time" data-i18n="process_step_4_time">По ходу</span>
                 </div>
 
                 <!-- Этап 5 -->
                 <div class="process-step-card">
                     <div class="step-number">5</div>
-                    <h3 class="step-title">Запуск и реализация</h3>
-                    <span class="step-time">По готовности</span>
+                    <h3 class="step-title" data-i18n="process_step_5_title">Запуск и реализация</h3>
+                    <span class="step-time" data-i18n="process_step_5_time">По готовности</span>
                 </div>
 
                 <!-- Этап 6 -->
                 <div class="process-step-card">
                     <div class="step-number">6</div>
-                    <h3 class="step-title">Поддержка</h3>
-                    <span class="step-time">1 месяц</span>
+                    <h3 class="step-title" data-i18n="process_step_6_title">Поддержка</h3>
+                    <span class="step-time" data-i18n="process_step_6_time">1 месяц</span>
                 </div>
             </div>
             <div class="process-footer">
-                <p class="process-accent">Мы не продаём часы. Мы делаем работающие решения под бизнес-задачи.</p>
+                <p class="process-accent" data-i18n="process_footer">Мы не продаём часы. Мы делаем работающие решения под бизнес-задачи.</p>
             </div>
         </div>
     </section>
@@ -422,10 +423,10 @@
         <!-- Пакеты -->
         <section id="packages" class="packages">
             <div class="container">
-                <h2 class="section-header">Пакеты</h2>
+                <h2 class="section-header" data-i18n="packages_header">Пакеты</h2>
                 <div class="package-tab-buttons">
-                    <button class="tab-button active" data-tab="bot-packages">Telegram Bot</button>
-                    <button class="tab-button" data-tab="mini-apps-packages">Telegram Mini Apps</button>
+                    <button class="tab-button active" data-tab="bot-packages" data-i18n="packages_tab_bot">Telegram Bot</button>
+                    <button class="tab-button" data-tab="mini-apps-packages" data-i18n="packages_tab_miniapps">Telegram Mini Apps</button>
                 </div>
     
                 <div class="package-tab-content active" id="bot-packages">
@@ -433,135 +434,135 @@
                         <!-- Пакет Lite -->
                         <div class="package-card package-lite">
                             <div class="package-header">
-                                <h3 class="package-name">Lite</h3>
-                                <div class="package-badge">Базовый</div>
+                                <h3 class="package-name" data-i18n="packages_bot_lite_name">Lite</h3>
+                                <div class="package-badge" data-i18n="packages_bot_lite_badge">Базовый</div>
                             </div>
                             <div class="package-content">
-                                <p class="package-description">Идеально для стартапов и небольших проектов</p>
+                                <p class="package-description" data-i18n="packages_bot_lite_desc">Идеально для стартапов и небольших проектов</p>
                                 <ul class="package-features">
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Диалоги + тексты внутри бота</span>
+                                        <span data-i18n="packages_bot_lite_feature_1">Диалоги + тексты внутри бота</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Приветственное меню, анкеты, квизы, подписка на уведомления</span>
+                                        <span data-i18n="packages_bot_lite_feature_2">Приветственное меню, анкеты, квизы, подписка на уведомления</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Рассылки, опросы, воронки сообщений</span>
+                                        <span data-i18n="packages_bot_lite_feature_3">Рассылки, опросы, воронки сообщений</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Работа без подключения внешних сервисов и API</span>
+                                        <span data-i18n="packages_bot_lite_feature_4">Работа без подключения внешних сервисов и API</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Запуск на сервере + 1 месяц поддержки</span>
+                                        <span data-i18n="packages_bot_lite_feature_5">Запуск на сервере + 1 месяц поддержки</span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="package-footer">
-                                <span class="package-duration step-time">до 2 дней</span>
-                                <a href="#contact" class="package-button" data-package="bot-lite">Обсудить проект</a>
+                                <span class="package-duration step-time" data-i18n="packages_bot_lite_duration">до 2 дней</span>
+                                <a href="#contact" class="package-button" data-package="bot-lite" data-i18n="packages_bot_lite_cta">Обсудить проект</a>
                             </div>
                         </div>
     
                         <!-- Пакет Standard -->
                         <div class="package-card package-standard package-popular">
                             <div class="package-header">
-                                <h3 class="package-name">Standard</h3>
-                                <div class="package-badge package-badge-popular">Популярный</div>
+                                <h3 class="package-name" data-i18n="packages_bot_standard_name">Standard</h3>
+                                <div class="package-badge package-badge-popular" data-i18n="packages_bot_standard_badge">Популярный</div>
                             </div>
                             <div class="package-content">
-                                <p class="package-description">Оптимальное решение для растущего бизнеса</p>
+                                <p class="package-description" data-i18n="packages_bot_standard_desc">Оптимальное решение для растущего бизнеса</p>
                                 <ul class="package-features">
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Всё из Lite</span>
+                                        <span data-i18n="packages_bot_standard_feature_1">Всё из Lite</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Ограниченное подключение к сервисам по API</span>
+                                        <span data-i18n="packages_bot_standard_feature_2">Ограниченное подключение к сервисам по API</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Хранение данных клиентов/заявок</span>
+                                        <span data-i18n="packages_bot_standard_feature_3">Хранение данных клиентов/заявок</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>1 AI-сценарий (например: чат-помощник, классификация заявки, подбор товара)</span>
+                                        <span data-i18n="packages_bot_standard_feature_4">1 AI-сценарий (например: чат-помощник, классификация заявки, подбор товара)</span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="package-footer">
-                                <span class="package-duration step-time">до 7 дней</span>
-                                <a href="#contact" class="package-button package-button-primary" data-package="bot-standard">Обсудить проект</a>
+                                <span class="package-duration step-time" data-i18n="packages_bot_standard_duration">до 7 дней</span>
+                                <a href="#contact" class="package-button package-button-primary" data-package="bot-standard" data-i18n="packages_bot_standard_cta">Обсудить проект</a>
                             </div>
                         </div>
     
                         <!-- Пакет Pro -->
                         <div class="package-card package-pro">
                             <div class="package-header">
-                                <h3 class="package-name">Pro</h3>
-                                <div class="package-badge">Премиум</div>
+                                <h3 class="package-name" data-i18n="packages_bot_pro_name">Pro</h3>
+                                <div class="package-badge" data-i18n="packages_bot_pro_badge">Премиум</div>
                             </div>
                             <div class="package-content">
-                                <p class="package-description">Максимальные возможности для крупных проектов</p>
+                                <p class="package-description" data-i18n="packages_bot_pro_desc">Максимальные возможности для крупных проектов</p>
                                 <ul class="package-features">
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Всё из Standard</span>
+                                        <span data-i18n="packages_bot_pro_feature_1">Всё из Standard</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Сложный AI (RAG / агенты)</span>
+                                        <span data-i18n="packages_bot_pro_feature_2">Сложный AI (RAG / агенты)</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Платежи + крипта (при необходимости)</span>
+                                        <span data-i18n="packages_bot_pro_feature_3">Платежи + крипта (при необходимости)</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Сложная бизнес-логика</span>
+                                        <span data-i18n="packages_bot_pro_feature_4">Сложная бизнес-логика</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Бот обучается на документах, базе знаний, сайтах</span>
+                                        <span data-i18n="packages_bot_pro_feature_5">Бот обучается на документах, базе знаний, сайтах</span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="package-footer">
-                                <span class="package-duration step-time">до 21 дня</span>
-                                <a href="#contact" class="package-button" data-package="bot-pro">Обсудить проект</a>
+                                <span class="package-duration step-time" data-i18n="packages_bot_pro_duration">до 21 дня</span>
+                                <a href="#contact" class="package-button" data-package="bot-pro" data-i18n="packages_bot_pro_cta">Обсудить проект</a>
                             </div>
                         </div>
                     </div>
@@ -572,147 +573,147 @@
                         <!-- Пакет Lite -->
                         <div class="package-card package-lite">
                             <div class="package-header">
-                                <h3 class="package-name">Lite</h3>
-                                <div class="package-badge">Базовый</div>
+                                <h3 class="package-name" data-i18n="packages_app_lite_name">Lite</h3>
+                                <div class="package-badge" data-i18n="packages_app_lite_badge">Базовый</div>
                             </div>
                             <div class="package-content">
-                                <p class="package-description">Идеально для стартапов и небольших проектов</p>
+                                <p class="package-description" data-i18n="packages_app_lite_desc">Идеально для стартапов и небольших проектов</p>
                                 <ul class="package-features">
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Телеграм-сайт до 2 страниц</span>
+                                        <span data-i18n="packages_app_lite_feature_1">Телеграм-сайт до 2 страниц</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Презентация услуги/продукта + Форма заявки/звонка</span>
+                                        <span data-i18n="packages_app_lite_feature_2">Презентация услуги/продукта + Форма заявки/звонка</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Адаптация под бренд по цветам (без макета)</span>
+                                        <span data-i18n="packages_app_lite_feature_3">Адаптация под бренд по цветам (без макета)</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Запуск на сервере + 1 месяц поддержки</span>
+                                        <span data-i18n="packages_app_lite_feature_4">Запуск на сервере + 1 месяц поддержки</span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="package-footer">
-                                <span class="package-duration step-time">до 7 дней</span>
-                                <a href="#contact" class="package-button" data-package="app-lite">Обсудить проект</a>
+                                <span class="package-duration step-time" data-i18n="packages_app_lite_duration">до 7 дней</span>
+                                <a href="#contact" class="package-button" data-package="app-lite" data-i18n="packages_app_lite_cta">Обсудить проект</a>
                             </div>
                         </div>
     
                         <!-- Пакет Standard -->
                         <div class="package-card package-standard package-popular">
                             <div class="package-header">
-                                <h3 class="package-name">Standard</h3>
-                                <div class="package-badge package-badge-popular">Популярный</div>
+                                <h3 class="package-name" data-i18n="packages_app_standard_name">Standard</h3>
+                                <div class="package-badge package-badge-popular" data-i18n="packages_app_standard_badge">Популярный</div>
                             </div>
                             <div class="package-content">
-                                <p class="package-description">Оптимальное решение для растущего бизнеса</p>
+                                <p class="package-description" data-i18n="packages_app_standard_desc">Оптимальное решение для растущего бизнеса</p>
                                 <ul class="package-features">
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Всё из Lite</span>
+                                        <span data-i18n="packages_app_standard_feature_1">Всё из Lite</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>До 3 страниц + личный кабинет (простая версия)</span>
+                                        <span data-i18n="packages_app_standard_feature_2">До 3 страниц + личный кабинет (простая версия)</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Каталог/услуги (без сложных фильтров)</span>
+                                        <span data-i18n="packages_app_standard_feature_3">Каталог/услуги (без сложных фильтров)</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Ограниченые интеграции по API</span>
+                                        <span data-i18n="packages_app_standard_feature_4">Ограниченые интеграции по API</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Можно подключать оплаты/крипту (обычные, без смарт-контрактов)</span>
+                                        <span data-i18n="packages_app_standard_feature_5">Можно подключать оплаты/крипту (обычные, без смарт-контрактов)</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Админка только в боте (просмотр заявок, модерация)</span>
+                                        <span data-i18n="packages_app_standard_feature_6">Админка только в боте (просмотр заявок, модерация)</span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="package-footer">
-                                <span class="package-duration step-time">до 14 дней</span>
-                                <a href="#contact" class="package-button package-button-primary" data-package="app-standard">Обсудить проект</a>
+                                <span class="package-duration step-time" data-i18n="packages_app_standard_duration">до 14 дней</span>
+                                <a href="#contact" class="package-button package-button-primary" data-package="app-standard" data-i18n="packages_app_standard_cta">Обсудить проект</a>
                             </div>
                         </div>
     
                         <!-- Пакет Pro -->
                         <div class="package-card package-pro">
                             <div class="package-header">
-                                <h3 class="package-name">Pro</h3>
-                                <div class="package-badge">Премиум</div>
+                                <h3 class="package-name" data-i18n="packages_app_pro_name">Pro</h3>
+                                <div class="package-badge" data-i18n="packages_app_pro_badge">Премиум</div>
                             </div>
                             <div class="package-content">
-                                <p class="package-description">Максимальные возможности для крупных проектов</p>
+                                <p class="package-description" data-i18n="packages_app_pro_desc">Максимальные возможности для крупных проектов</p>
                                 <ul class="package-features">
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Всё из Standard</span>
+                                        <span data-i18n="packages_app_pro_feature_1">Всё из Standard</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Сложная админка (в MiniApp и/или боте)</span>
+                                        <span data-i18n="packages_app_pro_feature_2">Сложная админка (в MiniApp и/или боте)</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Сложные личные кабинеты (роли, аналитика, фильтры, корзина)</span>
+                                        <span data-i18n="packages_app_pro_feature_3">Сложные личные кабинеты (роли, аналитика, фильтры, корзина)</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>AI-функции - RAG — поиск по базе знаний/документам</span>
+                                        <span data-i18n="packages_app_pro_feature_4">AI-функции - RAG — поиск по базе знаний/документам</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Сложные интеграции без ограничений по API</span>
+                                        <span data-i18n="packages_app_pro_feature_5">Сложные интеграции без ограничений по API</span>
                                     </li>
                                     <li class="package-feature">
                                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span>Платежи + крипта + смарт-контракты</span>
+                                        <span data-i18n="packages_app_pro_feature_6">Платежи + крипта + смарт-контракты</span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="package-footer">
-                                <span class="package-duration step-time">до 30 дней</span>
-                                <a href="#contact" class="package-button" data-package="app-pro">Обсудить проект</a>
+                                <span class="package-duration step-time" data-i18n="packages_app_pro_duration">до 30 дней</span>
+                                <a href="#contact" class="package-button" data-package="app-pro" data-i18n="packages_app_pro_cta">Обсудить проект</a>
                             </div>
                         </div>
                     </div>
@@ -727,21 +728,21 @@
                 <!-- Header -->
                 <div class="about-header">
                     <h2 class="about-title">
-                        <span class="gradient-text">DevCore</span>
+                        <span class="gradient-text" data-i18n="about_title">DevCore</span>
                     </h2>
                 </div>
 
                 <!-- Description -->
                 <div class="about-description">
                     <div class="about-text-block">
-                        <p class="about-text-primary">
+                        <p class="about-text-primary" data-i18n="about_primary">
                             Мы — команда опытных разработчиков, дизайнеров и технологических энтузиастов. 
                             Создаем цифровые продукты, которые решают реальные бизнес-задачи и меняют индустрии.
                             Работаем как продуктовая команда, а не просто подрядчик.
                         </p>
                     </div>
                     <div class="about-text-block">
-                        <p class="about-text-secondary">
+                        <p class="about-text-secondary" data-i18n="about_secondary">
                             Наш подход основан на глубоком понимании потребностей клиентов, использовании современных технологий 
                             и стремлении к совершенству в каждой детали. Мы помогаем стартапам и крупным компаниям 
                             создавать инновационные решения, которые выделяют их на рынке и приносят реальную ценность пользователям.
@@ -755,7 +756,7 @@
     <!-- Контакты -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-header">Давайте знакомиться</h2>
+            <h2 class="section-header" data-i18n="contact_header">Давайте знакомиться</h2>
             
             <div class="social-links-grid">
                 <div class="contact-card">
@@ -763,8 +764,8 @@
                         <img src="assets/tg.png" alt="Telegram" />
                     </a>
                     <div class="social-text">
-                        <h3>Telegram</h3>
-                        <p class="contact-person">Связаться через Телеграм</p>
+                        <h3 data-i18n="contact_tg_title">Telegram</h3>
+                        <p class="contact-person" data-i18n="contact_tg_desc">Связаться через Телеграм</p>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -772,8 +773,8 @@
                         <img src="assets/kwork.png" alt="Kwork" />
                     </a>
                     <div class="social-text">
-                        <h3>Kwork</h3>
-                        <p class="contact-person">Оформить через биржу Kwork</p>
+                        <h3 data-i18n="contact_kwork_title">Kwork</h3>
+                        <p class="contact-person" data-i18n="contact_kwork_desc">Оформить через биржу Kwork</p>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -781,8 +782,8 @@
                         <img src="assets/github-mark.png" alt="GitHub" />
                     </a>
                     <div class="social-text">
-                        <h3>GitHub</h3>
-                        <p class="contact-person">Наши репозитории</p>
+                        <h3 data-i18n="contact_github_title">GitHub</h3>
+                        <p class="contact-person" data-i18n="contact_github_desc">Наши репозитории</p>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -790,8 +791,8 @@
                         <img src="assets/fiverr.png" alt="Fiverr" />
                     </a>
                     <div class="social-text">
-                        <h3>Fiverr</h3>
-                        <p class="contact-person">Оформить через биржу Fiverr</p>
+                        <h3 data-i18n="contact_fiverr_title">Fiverr</h3>
+                        <p class="contact-person" data-i18n="contact_fiverr_desc">Оформить через биржу Fiverr</p>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -799,8 +800,8 @@
                         <img src="assets/setka.png" alt="Setka" />
                     </a>
                     <div class="social-text">
-                        <h3>Cетка</h3>
-                        <p class="contact-person">Мы в Сетке</p>
+                        <h3 data-i18n="contact_setka_title">Cетка</h3>
+                        <p class="contact-person" data-i18n="contact_setka_desc">Мы в Сетке</p>
                     </div>
                 </div>
             </div>
@@ -812,7 +813,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-copy">
-                    <p>© 2026 DevCore. Все права защищены.</p>
+                    <p data-i18n="footer_copy">© 2026 DevCore. Все права защищены.</p>
                 </div>
             </div>
         </div>
@@ -821,9 +822,9 @@
     <!-- Модальное окно успеха -->
     <div class="modal" id="successModal">
         <div class="modal-content">
-            <h3>Приятно познакомиться!</h3>
-            <p>Мы получили вашу заявку и свяжемся с вами в ближайшее время.</p>
-            <button class="modal-close" onclick="closeModal()">Отлично</button>
+            <h3 data-i18n="modal_success_title">Приятно познакомиться!</h3>
+            <p data-i18n="modal_success_text">Мы получили вашу заявку и свяжемся с вами в ближайшее время.</p>
+            <button class="modal-close" onclick="closeModal()" data-i18n="modal_success_button">Отлично</button>
         </div>
     </div>
 

@@ -2,6 +2,8 @@
 
 import { isMobileDevice, prefersReducedMotion } from './utils/helpers.js';
 
+import { initI18n } from './modules/i18n.js';
+
 // UI Modules
 import {
     initScrollIndicator,
@@ -80,6 +82,7 @@ class DevCoreApp {
      * Core modules that always load
      */
     initCoreModules() {
+        initI18n();
         initScrollAnimations();
         initMobileMenu();
         initSmoothScroll();
